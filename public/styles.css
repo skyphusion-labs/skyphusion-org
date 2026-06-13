@@ -1,0 +1,30 @@
+/* Starter theme -- dark, plain, fast. Rollins owns the real design. No build, no framework. */
+:root {
+  --bg: #0c0c0e;
+  --fg: #e8e6e3;
+  --muted: #9a978f;
+  --accent: #00d6c2;
+  --card: #15151a;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+}
+.hero { padding: 4rem 0 2rem; border-bottom: 1px solid #222; }
+.hero h1 { font-size: 3rem; margin: 0; letter-spacing: -0.02em; }
+.tag { color: var(--accent); font-size: 1.15rem; margin: 0.5rem 0 0; }
+section { margin: 2.5rem 0; }
+h2 { font-size: 1.4rem; border-left: 3px solid var(--accent); padding-left: 0.6rem; }
+.cards { list-style: none; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.cards li { background: var(--card); border: 1px solid #222; border-radius: 8px; padding: 1rem 1.1rem; }
+.cards h3 { margin: 0 0 0.3rem; color: var(--accent); }
+.cards p, .intro p, .ethos p { color: var(--muted); }
+footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #222; }
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }

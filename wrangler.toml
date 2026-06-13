@@ -1,0 +1,21 @@
+# skyphusion.org -- the intro site. A thin Worker that serves static assets (public/).
+# No build step, no framework -- vanilla HTML/CSS/JS by design.
+#
+# account_id is read from CLOUDFLARE_ACCOUNT_ID (env / CI secret), not hardcoded.
+
+name = "skyphusion-org"
+main = "src/index.ts"
+compatibility_date = "2026-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+# The static site.
+assets = { directory = "./public", binding = "ASSETS" }
+
+[observability]
+enabled = true
+
+# --- Deploy / routing (Strummer or a follow-up) ---
+# Point the skyphusion.org root at this worker (it currently serves the AI playground).
+# [[routes]]
+# pattern = "skyphusion.org/*"
+# zone_name = "skyphusion.org"
