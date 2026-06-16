@@ -14,8 +14,11 @@ assets = { directory = "./public", binding = "ASSETS" }
 [observability]
 enabled = true
 
-# --- Deploy / routing (Strummer or a follow-up) ---
-# Point the skyphusion.org root at this worker (it currently serves the AI playground).
-# [[routes]]
-# pattern = "skyphusion.org/*"
-# zone_name = "skyphusion.org"
+# --- Deploy / routing ---
+# Serve the apex skyphusion.org from this worker via a Workers Custom Domain.
+# custom_domain provisions the proxied DNS + cert for the bare apex (a plain route
+# pattern would have no DNS to attach to). The apex MX/TXT (email routing) records
+# are unaffected. (www is a separate follow-up: it currently points at a placeholder.)
+[[routes]]
+pattern = "skyphusion.org"
+custom_domain = true
