@@ -22,3 +22,7 @@ enabled = true
 [[routes]]
 pattern = "skyphusion.org"
 custom_domain = true
+
+[[routes]]
+pattern = "www.skyphusion.org"
+custom_domain = true
