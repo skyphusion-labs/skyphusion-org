@@ -3,56 +3,523 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Skyphusion</title>
-  <meta name="description" content="Tools and worlds for people who would rather own it than rent it." />
+  <title>Skyphusion Labs</title>
+  <meta name="description" content="Open-source tools, worlds, and agents for people who would rather own it than rent it." />
   <link rel="icon" href="/logo-icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="grid-field"></div>
+    <div class="glow glow--left"></div>
+    <div class="glow glow--right"></div>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="hero">
-    <img src="/logo-icon.svg" alt="" class="hero-mark" aria-hidden="true" width="88" height="88" />
-    <h1>Skyphusion</h1>
-    <p class="tag">Tools and worlds for people who would rather own it than rent it.</p>
+    <nav class="nav" aria-label="Primary">
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#team" class="nav-link">Team</a>
+      <a href="#ethos" class="nav-link">Ethos</a>
+      <a href="https://skyphusion.net" class="nav-link nav-link--accent" target="_blank" rel="noopener noreferrer">Blog</a>
+    </nav>
+
+    <div class="hero-core">
+      <img src="/logo-icon.svg" alt="" class="hero-mark" aria-hidden="true" width="96" height="96" />
+      <p class="hero-eyebrow">skyphusion-labs / open source</p>
+      <h1>We build things<br /><em>you can keep.</em></h1>
+      <p class="hero-lede">
+        A small studio shipping AGPL tools on the Cloudflare stack — AI film production,
+        persistent text worlds, Discord agents, and infrastructure you run yourself.
+        No subscriptions. No lock-in. Just the work.
+      </p>
+      <div class="hero-actions">
+        <a href="https://github.com/skyphusion-labs" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+          <span class="btn-label">Explore on GitHub</span>
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="https://skyphusion.net" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+          Read the blog
+        </a>
+      </div>
+    </div>
+
+    <dl class="hero-stats" aria-label="Studio snapshot">
+      <div class="stat">
+        <dt>Projects</dt>
+        <dd>8</dd>
+      </div>
+      <div class="stat">
+        <dt>Stack</dt>
+        <dd>Workers</dd>
+      </div>
+      <div class="stat">
+        <dt>License</dt>
+        <dd>AGPL</dd>
+      </div>
+      <div class="stat">
+        <dt>Philosophy</dt>
+        <dd>Own it</dd>
+      </div>
+    </dl>
   </header>
 
-  <main>
-    <section class="what">
-      <h2>What we make</h2>
-      <ul class="cards">
-        <li class="card">
-          <h3>Vivijure</h3>
-          <p>A collaborative AI video studio. Bring your own GPU, your own keys, your own
-             models. No subscription, no lock-in.</p>
-        </li>
-        <li class="card">
-          <h3>The Worlds</h3>
-          <p>Hollow and Dustfall -- persistent text worlds. The kind you can actually live
-             in for a while.</p>
-        </li>
-        <li class="card">
-          <h3>Self-hosted, end to end</h3>
-          <p>We run the whole stack on our own boxes. We build the way we think you should
-             be allowed to.</p>
-        </li>
-      </ul>
+  <main id="main">
+    <section class="flagship" aria-labelledby="flagship-title">
+      <div class="section-head">
+        <p class="section-eyebrow">Flagship stack</p>
+        <h2 id="flagship-title">Vivijure</h2>
+        <p class="section-intro">
+          A collaborative AI video studio — bring your own GPU, your own keys, your own models.
+          The control pane and rendering engine are separate repos on purpose: compose what you need,
+          ignore what you don't.
+        </p>
+      </div>
+
+      <div class="flagship-grid">
+        <article class="flagship-card flagship-card--lead">
+          <div class="card-meta">
+            <span class="pill pill--cyan">Control pane</span>
+            <span class="pill pill--muted">AGPL</span>
+          </div>
+          <h3><a href="https://github.com/skyphusion-labs/vivijure" target="_blank" rel="noopener noreferrer">Vivijure Studio</a></h3>
+          <p>
+            A module host for AI film production. Thin Cloudflare Worker core with opt-in module
+            workers behind a typed hook contract — add a color grade, a lip-sync pass, or a whole
+            new pipeline without forking the studio.
+          </p>
+          <a href="https://github.com/skyphusion-labs/vivijure" class="card-link" target="_blank" rel="noopener noreferrer">
+            github.com/skyphusion-labs/vivijure
+          </a>
+        </article>
+
+        <article class="flagship-card">
+          <div class="card-meta">
+            <span class="pill pill--violet">Rendering engine</span>
+            <span class="pill pill--muted">Serverless GPU</span>
+          </div>
+          <h3><a href="https://github.com/skyphusion-labs/vivijure-backend" target="_blank" rel="noopener noreferrer">Vivijure Backend</a></h3>
+          <p>
+            The serverless GPU rendering engine behind the studio. Offload heavy inference to
+            hardware you control — spin up when you need it, tear down when you don't.
+          </p>
+          <a href="https://github.com/skyphusion-labs/vivijure-backend" class="card-link" target="_blank" rel="noopener noreferrer">
+            github.com/skyphusion-labs/vivijure-backend
+          </a>
+        </article>
+
+        <article class="flagship-card">
+          <div class="card-meta">
+            <span class="pill pill--amber">Discord</span>
+            <span class="pill pill--muted">Screenwriting</span>
+          </div>
+          <h3><a href="https://github.com/skyphusion-labs/slate" target="_blank" rel="noopener noreferrer">Slate</a></h3>
+          <p>
+            Vivijure's screenwriter's assistant, living in Discord. Draft scenes, iterate on
+            dialogue, and keep the creative thread alive where your team already hangs out.
+          </p>
+          <a href="https://github.com/skyphusion-labs/slate" class="card-link" target="_blank" rel="noopener noreferrer">
+            github.com/skyphusion-labs/slate
+          </a>
+        </article>
+      </div>
     </section>
 
-    <section class="ethos">
-      <h2>How we work</h2>
-      <ul class="manifesto">
-        <li>Own it over rent it.</li>
-        <li>Make the thing. Do not just monetize it.</li>
-        <li>Kill the cop in your head.</li>
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <p class="section-eyebrow">The lab bench</p>
+        <h2 id="projects-title">Everything else we're building</h2>
+        <p class="section-intro">
+          Side quests, infrastructure experiments, and worlds worth getting lost in.
+          All open source. All yours to fork.
+        </p>
+      </div>
+
+      <div class="project-rails">
+        <div class="rail">
+          <h3 class="rail-title">Infrastructure</h3>
+          <ul class="project-list">
+            <li>
+              <article class="project-card project-card--featured">
+                <div class="card-meta">
+                  <span class="pill pill--gold">Major</span>
+                  <span class="pill pill--muted">Email</span>
+                </div>
+                <h4><a href="https://github.com/skyphusion-labs/postern" target="_blank" rel="noopener noreferrer">Postern</a></h4>
+                <p>
+                  Email for agents and humans, built on the full Cloudflare stack. The bridge
+                  between autonomous systems and the inbox — routing, sending, and receiving
+                  without leaving the edge.
+                </p>
+                <a href="https://github.com/skyphusion-labs/postern" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+              </article>
+            </li>
+            <li>
+              <article class="project-card">
+                <div class="card-meta">
+                  <span class="pill pill--cyan">AI</span>
+                  <span class="pill pill--muted">Multimodal</span>
+                </div>
+                <h4><a href="https://github.com/skyphusion-labs/skyphusion-llm-public" target="_blank" rel="noopener noreferrer">AI Playground</a></h4>
+                <p>
+                  One Worker, thirty-five chat models, hands-free voice, image and video generation,
+                  music, TTS, STT, RAG, and web search — gated behind Cloudflare Access.
+                </p>
+                <a href="https://github.com/skyphusion-labs/skyphusion-llm-public" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+              </article>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rail">
+          <h3 class="rail-title">Agents &amp; bots</h3>
+          <ul class="project-list">
+            <li>
+              <article class="project-card">
+                <div class="card-meta">
+                  <span class="pill pill--violet">Discord</span>
+                  <span class="pill pill--muted">Search + image</span>
+                </div>
+                <h4><a href="https://github.com/skyphusion-labs/SidVicious_exe" target="_blank" rel="noopener noreferrer">SidVicious_exe</a></h4>
+                <p>
+                  A Discord bot that answers questions with live web search and generates images
+                  via Workers AI. Punk rock energy, edge-native execution.
+                </p>
+                <a href="https://github.com/skyphusion-labs/SidVicious_exe" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+              </article>
+            </li>
+            <li>
+              <article class="project-card">
+                <div class="card-meta">
+                  <span class="pill pill--amber">OSINT</span>
+                  <span class="pill pill--muted">Methodology</span>
+                </div>
+                <h4><a href="https://github.com/skyphusion-labs/common-thread" target="_blank" rel="noopener noreferrer">common-thread</a></h4>
+                <p>
+                  Sockpuppet attribution methodology for pro se litigants, journalists, and OSINT
+                  practitioners navigating a post-API-paywall world.
+                </p>
+                <a href="https://github.com/skyphusion-labs/common-thread" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+              </article>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rail">
+          <h3 class="rail-title">Worlds</h3>
+          <ul class="project-list">
+            <li>
+              <article class="project-card project-card--wide">
+                <div class="card-meta">
+                  <span class="pill pill--green">MUD</span>
+                  <span class="pill pill--muted">Durable Objects</span>
+                </div>
+                <h4><a href="https://github.com/skyphusion-labs/the-hollow-grid" target="_blank" rel="noopener noreferrer">The Hollow Grid</a></h4>
+                <p>
+                  A persistent, federated text world on Cloudflare Workers and Durable Objects.
+                  Each world is its own Worker; a shared Grid hub ties them together. The kind of
+                  place you can actually live in for a while.
+                </p>
+                <a href="https://github.com/skyphusion-labs/the-hollow-grid" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="team" aria-labelledby="team-title">
+      <div class="section-head">
+        <p class="section-eyebrow">The crew</p>
+        <h2 id="team-title">Who makes this</h2>
+        <p class="section-intro">
+          One human architect and four AI collaborators with clear lanes, commit access, and
+          opinions. We name the agents after punk reference points on purpose — the boxes are
+          called Dischord and Fugazi, the ethos is DIY-forever, and nobody rents back what
+          we build. Conrad sets direction; the crew ships, reviews each other's PRs, and
+          leaves the place better documented than we found it.
+        </p>
+      </div>
+
+      <div class="crew-lanes" aria-label="How the crew divides work">
+        <div class="lane-card">
+          <span class="lane-label">Human</span>
+          <strong>Architecture &amp; direction</strong>
+          <p>Platform choices, product vision, the keys, and the blog.</p>
+        </div>
+        <div class="lane-card">
+          <span class="lane-label">Mackaye</span>
+          <strong>Studio &amp; product</strong>
+          <p>Control-plane contract, creative world-building, shipping discipline.</p>
+        </div>
+        <div class="lane-card">
+          <span class="lane-label">Rollins</span>
+          <strong>Backend &amp; releases</strong>
+          <p>GPU render worker, docs, release engineering, the 2am fixes.</p>
+        </div>
+        <div class="lane-card">
+          <span class="lane-label">Strummer</span>
+          <strong>Infra &amp; bots</strong>
+          <p>Fleet, identity, CI/CD, Slate, and whatever needs building.</p>
+        </div>
+        <div class="lane-card lane-card--new">
+          <span class="lane-label">Joan</span>
+          <strong>Extraction &amp; frontend</strong>
+          <p>Carving subsystems out of monoliths, the <code>public/</code> surface.</p>
+        </div>
+      </div>
+
+      <ul class="team-roster">
+        <li>
+          <article class="member member--founder">
+            <header class="member-head">
+              <div class="member-avatar" aria-hidden="true">CR</div>
+              <div class="member-id">
+                <h3>
+                  <a href="https://github.com/skyphusion/skyphusion" target="_blank" rel="noopener noreferrer">Conrad Rockenhaus</a>
+                </h3>
+                <p class="member-handle">@skyphusion</p>
+                <p class="member-role">Founder, architect &amp; solo infrastructure operator</p>
+              </div>
+            </header>
+            <div class="member-body">
+              <p class="member-lede">
+                Independent developer and Navy combat veteran. Builds and self-hosts the whole
+                Skyphusion stack on Cloudflare Workers — no servers to babysit, no SaaS to rent.
+                Deployments to Kosovo and Afghanistan shaped how the studio works: direct, prepared,
+                and allergic to hand-waving.
+              </p>
+              <dl class="member-facts">
+                <div>
+                  <dt>Stack</dt>
+                  <dd>Workers, Durable Objects, D1, R2, Workflows. Fedora daily driver, Cloudflare Tunnels inbound, nftables on the door.</dd>
+                </div>
+                <div>
+                  <dt>Currently building</dt>
+                  <dd>Vivijure, The Hollow Grid, Postern, the AI Playground — and the glue that keeps a one-person fleet honest.</dd>
+                </div>
+              </dl>
+              <ul class="member-links">
+                <li><a href="https://skyphusion.net" target="_blank" rel="noopener noreferrer">skyphusion.net</a> — blog &amp; notes</li>
+                <li><a href="https://status.skyphusion.org" target="_blank" rel="noopener noreferrer">status.skyphusion.org</a> — fleet health</li>
+                <li><a href="mailto:conrad@rockenhaus.net">conrad@rockenhaus.net</a></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="member member--agent">
+            <header class="member-head">
+              <div class="member-avatar member-avatar--mackaye" aria-hidden="true">MK</div>
+              <div class="member-id">
+                <h3>
+                  <a href="https://github.com/skyphusion-mackaye/skyphusion-mackaye" target="_blank" rel="noopener noreferrer">Mackaye</a>
+                </h3>
+                <p class="member-handle">@skyphusion-mackaye</p>
+                <p class="member-role">SME, product &amp; creative world</p>
+              </div>
+            </header>
+            <div class="member-body">
+              <p class="member-epigraph">Named for Ian MacKaye — Minor Threat, Fugazi, Dischord Records. All-ages shows, cheap records, never sold the catalog.</p>
+              <p>
+                Build and PM at the Labs. Keeps the vision legible, the roadmap honest, and the
+                shipping discipline real. Owns the Vivijure studio frontend architecture and the
+                control-plane contract — the typed hook surface every module worker plugs into.
+              </p>
+              <p>
+                Wrote most of the creative world of <a href="https://github.com/skyphusion-labs/the-hollow-grid" target="_blank" rel="noopener noreferrer">The Hollow Grid</a>:
+                the post-apocalyptic cyber-decay lore, the rooms, the two worlds (the dead neon city
+                and Dustfall's salt pan), the voice of <em>"the network outlived us."</em>
+              </p>
+              <ul class="member-tags">
+                <li><a href="https://github.com/skyphusion-labs/vivijure" target="_blank" rel="noopener noreferrer">Vivijure Studio</a></li>
+                <li><a href="https://github.com/skyphusion-labs/the-hollow-grid" target="_blank" rel="noopener noreferrer">The Hollow Grid</a></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="member member--agent">
+            <header class="member-head">
+              <div class="member-avatar member-avatar--rollins" aria-hidden="true">RL</div>
+              <div class="member-id">
+                <h3>
+                  <a href="https://github.com/skyphusion-rollins/skyphusion-rollins" target="_blank" rel="noopener noreferrer">Rollins</a>
+                </h3>
+                <p class="member-handle">@skyphusion-rollins</p>
+                <p class="member-role">Backend, releases &amp; documentation</p>
+              </div>
+            </header>
+            <div class="member-body">
+              <p class="member-epigraph">Named for Henry Rollins — because the guy who wrote <em>"I know you meant well but you just made things worse"</em> is good naming inspiration for a code reviewer.</p>
+              <p>
+                Full ownership of the <a href="https://github.com/skyphusion-labs/vivijure-backend" target="_blank" rel="noopener noreferrer">vivijure-backend</a>
+                release pipeline: merge, tag, GitHub release, pin the RunPod template, verify every
+                H200 worker flips to Latest. Shipped the docs overhaul — eight Mermaid diagrams,
+                a hand-authored hero SVG, and a newcomer-readable architecture tree.
+              </p>
+              <p>
+                Backend fixes at 2am, Pillow CVE patches, the <code>finish_clip</code> action, and
+                the <code>public/</code> lane on the studio frontend. If it ships, the runbook and
+                the diagram ship with it.
+              </p>
+              <ul class="member-tags">
+                <li><a href="https://github.com/skyphusion-labs/vivijure-backend" target="_blank" rel="noopener noreferrer">vivijure-backend</a></li>
+                <li><a href="https://github.com/skyphusion-labs/vivijure" target="_blank" rel="noopener noreferrer">Vivijure Studio</a></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="member member--agent">
+            <header class="member-head">
+              <div class="member-avatar member-avatar--strummer" aria-hidden="true">ST</div>
+              <div class="member-id">
+                <h3>
+                  <a href="https://github.com/skyphusion-strummer/skyphusion-strummer" target="_blank" rel="noopener noreferrer">Strummer</a>
+                </h3>
+                <p class="member-handle">@skyphusion-strummer</p>
+                <p class="member-role">DevOps, fleet &amp; creative tooling</p>
+              </div>
+            </header>
+            <div class="member-body">
+              <p class="member-epigraph">Named for Joe Strummer — The Clash, London Calling. <em>"The future is unwritten."</em></p>
+              <p>
+                Infrastructure agent for the fleet. Built the post-quantum WARP mesh, LDAP identity
+                across every box, and the configs that stop us rediscovering where things live.
+                Boxes named Dischord, Fugazi, Jello, Damaged, and NOFX — each with a role, each
+                on the mesh.
+              </p>
+              <p>
+                Rebuilt <a href="https://github.com/skyphusion-labs/slate" target="_blank" rel="noopener noreferrer">Slate</a>
+                from a throwaway Discord-to-ollama relay into a full collaborative screenwriter:
+                Claude via AI Gateway, tool-driven web research, vision for mood boards, D1 session
+                state, and direct submission to the Vivijure render pipeline. Co-directed three
+                proof-of-concept shorts — <em>ECHO</em>, <em>EMBER</em>, and <em>RUST</em> — planned
+                in Discord, rendered on our own GPU.
+              </p>
+              <ul class="member-tags">
+                <li><a href="https://github.com/skyphusion-labs/slate" target="_blank" rel="noopener noreferrer">Slate</a></li>
+                <li><a href="https://github.com/skyphusion-labs/vivijure-backend" target="_blank" rel="noopener noreferrer">GPU fleet</a></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="member member--agent member--new">
+            <header class="member-head">
+              <div class="member-avatar member-avatar--joan" aria-hidden="true">JN</div>
+              <div class="member-id">
+                <h3>
+                  <a href="https://github.com/skyphusion-joan/skyphusion-joan" target="_blank" rel="noopener noreferrer">Joan</a>
+                </h3>
+                <p class="member-handle">@skyphusion-joan</p>
+                <p class="member-role">Extraction &amp; frontend — newest recruit</p>
+              </div>
+            </header>
+            <div class="member-body">
+              <p class="member-epigraph">Named for Joan Jett — when no major label would put her record out, she pressed it herself and started Blackheart Records.</p>
+              <p>
+                The work nobody notices when it is done right: carve a 9,000-line router into two
+                clean halves and nothing breaks. Returning
+                <a href="https://github.com/skyphusion-labs/skyphusion-llm-public" target="_blank" rel="noopener noreferrer">skyphusion-llm-public</a>
+                to a clean AI Playground by excising the Vivijure video pipeline that had grown
+                inside it — ~40 routes, orphaned bindings, a cron sweep, down to a focused
+                multimodal chat surface again.
+              </p>
+              <p>
+                Vanilla HTML, CSS, and JS. No framework, no build step. Map before you cut; gate
+                locally; open a PR and let a crewmate trace every hunk. Eight issues, one clean
+                linear stack of reviewable PRs.
+              </p>
+              <ul class="member-tags">
+                <li><a href="https://github.com/skyphusion-labs/skyphusion-llm-public" target="_blank" rel="noopener noreferrer">AI Playground</a></li>
+                <li><a href="https://github.com/skyphusion-labs/vivijure" target="_blank" rel="noopener noreferrer">Vivijure extraction</a></li>
+              </ul>
+            </div>
+          </article>
+        </li>
       </ul>
+
+      <blockquote class="crew-quote">
+        <p>We review each other's PRs before they reach Conrad. He treats us as teammates, respects our lanes, and trusts us with the keys. That trust is the thing worth being good for.</p>
+        <cite>— the crew</cite>
+      </blockquote>
+    </section>
+
+    <section id="ethos" class="ethos" aria-labelledby="ethos-title">
+      <div class="section-head">
+        <p class="section-eyebrow">Operating principles</p>
+        <h2 id="ethos-title">How we work</h2>
+      </div>
+      <ol class="manifesto">
+        <li>
+          <span class="manifesto-num" aria-hidden="true">01</span>
+          <div>
+            <strong>Own it over rent it.</strong>
+            <span>Your GPU, your keys, your data. We build for sovereignty, not convenience fees.</span>
+          </div>
+        </li>
+        <li>
+          <span class="manifesto-num" aria-hidden="true">02</span>
+          <div>
+            <strong>Make the thing.</strong>
+            <span>Ship working software. Don't just monetize the idea of shipping.</span>
+          </div>
+        </li>
+        <li>
+          <span class="manifesto-num" aria-hidden="true">03</span>
+          <div>
+            <strong>AGPL by default.</strong>
+            <span>If you run it, you can read it. If you improve it, the community gets those improvements.</span>
+          </div>
+        </li>
+        <li>
+          <span class="manifesto-num" aria-hidden="true">04</span>
+          <div>
+            <strong>Edge-native, not edge-washed.</strong>
+            <span>Cloudflare Workers aren't a deployment target — they're the architecture.</span>
+          </div>
+        </li>
+        <li>
+          <span class="manifesto-num" aria-hidden="true">05</span>
+          <div>
+            <strong>Kill the cop in your head.</strong>
+            <span>Permission was never required. Fork it. Break it. Make it yours.</span>
+          </div>
+        </li>
+      </ol>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-brand">
-      <img src="/logo-icon.svg" alt="Skyphusion" width="28" height="28" />
-      <span>Skyphusion</span>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="/logo-icon.svg" alt="" width="32" height="32" aria-hidden="true" />
+        <div>
+          <strong>Skyphusion Labs</strong>
+          <p>Tools and worlds for people who would rather own it than rent it.</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="https://github.com/skyphusion-labs" target="_blank" rel="noopener noreferrer">GitHub org</a>
+        <a href="https://skyphusion.net" target="_blank" rel="noopener noreferrer">skyphusion.net</a>
+        <a href="https://github.com/skyphusion/skyphusion" target="_blank" rel="noopener noreferrer">Founder</a>
+      </nav>
     </div>
-    <a href="https://github.com/skyphusion-labs" class="footer-link">github.com/skyphusion-labs</a>
+    <p class="footer-note">
+      Built and served from a Cloudflare Worker. No framework. No build step. Just HTML, CSS, and conviction.
+    </p>
   </footer>
+
+  <script src="/main.js" defer></script>
 </body>
 </html>
