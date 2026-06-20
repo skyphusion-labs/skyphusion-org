@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   ci:
-    runs-on: [self-hosted, fleet]
+    runs-on: ubuntu-latest
     container: node:22-alpine
     timeout-minutes: 10
     steps:
