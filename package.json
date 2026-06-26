@@ -2,7 +2,7 @@
   "name": "skyphusion-org",
   "version": "0.1.0",
   "description": "skyphusion.org -- the intro site. Who we are and what we make.",
-  "license": "AGPL-3.0-only",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",

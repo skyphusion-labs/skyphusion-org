@@ -26,3 +26,8 @@ This is the **front door**, not an app. The studio (Vivijure), the worlds, and t
 (skyphusion.net) live elsewhere. Keep this lean.
 
 See the build brief in the tracking issue.
+
+## License
+
+- **Site code:** [MIT](LICENSE).
+- **Site content** (copy, design, images, and other written or visual material): all rights reserved. No license is granted to reuse the content; the MIT license covers the code only.
