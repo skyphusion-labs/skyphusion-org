@@ -1,7 +1,8 @@
 name: CI
 
-# Typecheck on every push/PR; deploy to Cloudflare on main. Mirrors the vivijure
-# GH-Actions deploy pattern: self-hosted fleet runner, wrangler deploy on main.
+# Typecheck on every push/PR; deploy to Cloudflare on main. skyphusion-org is a
+# PUBLIC repo, so per CI policy it runs on GitHub-hosted ubuntu-latest (fork-safe),
+# NOT the self-hosted org fleet pool. wrangler deploy on main.
 # skyphusion-org is a thin static-asset worker -- no tests, no container builds.
 on:
   push:
