@@ -76,7 +76,7 @@ the self-hosted org fleet.
 - Crew commits land under the member's own `skyphusion-<member>` identity, never Conrad's. (Conrad
   devs ONLY on his laptop, where his commits author as `Conrad Rockenhaus <conrad@skyphusion.org>`
   -- his real name kept, the in-house `@skyphusion.org` email; his name is never scrubbed and his
-  history never rewritten. On jello the `conrad` user is the god process and commits as
+  history never rewritten. On the crew host the `conrad` user is the god process and commits as
   `Mackaye <mackaye@skyphusion.org>`.)
 - Cross-project operating context lives in the main auto-memory
   (`~/.claude/projects/-home-conrad/memory/`); load it before acting.
