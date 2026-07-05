@@ -430,7 +430,7 @@ section { margin: 4.5rem 0; }
 .crew-lanes {
   display: grid;
   gap: 0.75rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-bottom: 2.5rem;
 }
 .lane-card {
@@ -527,6 +527,7 @@ section { margin: 4.5rem 0; }
 .member-avatar--rollins { background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); }
 .member-avatar--strummer { background: linear-gradient(135deg, #059669 0%, #34d399 100%); }
 .member-avatar--joan { background: linear-gradient(135deg, #be123c 0%, #fb7185 100%); }
+.member-avatar--ernst { background: linear-gradient(135deg, #854d0e 0%, #fbbf24 100%); }
 .member-id h3 {
   margin: 0 0 0.15rem;
   font-family: var(--font-display);
@@ -594,7 +595,20 @@ section { margin: 4.5rem 0; }
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
 }
-.member-facts dt {
+.section-intro a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.section-intro a:hover {
+  text-decoration: underline;
+}
+.member-facts a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.member-facts a:hover {
+  text-decoration: underline;
+}
   font-family: var(--font-mono);
   font-size: 0.65rem;
   font-weight: 500;
