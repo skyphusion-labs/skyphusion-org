@@ -856,11 +856,13 @@
     <p class="footer-note">
       Built and served from a Cloudflare Worker. No framework. No build step. Just HTML, CSS, and conviction.
     </p>
+    <p class="footer-analytics">
+      Cookieless analytics (self-hosted) for aggregate traffic only; no individual tracking or ad-tech.
+    </p>
   </footer>
 
   <script src="/main.js" defer></script>
-  <!-- Cloudflare Web Analytics -->
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "7fa65fea6a304621ba964f1b005348ae"}'></script>
-  <!-- End Cloudflare Web Analytics -->
+  <!-- Umami OSS marketing analytics (self-hosted). website-id: fleet-chezmoi/system/umami/websites.json -->
+  <script defer src="https://analytics.skyphusion.org/script.js" data-website-id="a84616c8-21fd-408c-8814-d2a3bea02bda"></script>
 </body>
 </html>
