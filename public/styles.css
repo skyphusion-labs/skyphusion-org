@@ -788,6 +788,13 @@ section { margin: 4.5rem 0; }
   color: var(--dim);
   letter-spacing: 0.02em;
 }
+.footer-analytics {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--dim);
+  letter-spacing: 0.02em;
+}
 
 /* Scroll reveal */
 .reveal {
