@@ -1,8 +1,20 @@
 {
   "name": "skyphusion-org",
   "version": "0.1.0",
-  "description": "skyphusion.org -- the intro site. Who we are and what we make.",
+  "description": "skyphusion.org intro site: who Skyphusion Labs is and what we make.",
   "license": "MIT",
+  "homepage": "https://skyphusion.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skyphusion-labs/skyphusion-org.git"
+  },
+  "keywords": [
+    "cloudflare-workers",
+    "static-site",
+    "open-source",
+    "skyphusion-labs",
+    "landing-page"
+  ],
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
