@@ -27,6 +27,17 @@ This is the **front door**, not an app. The studio (Vivijure), the worlds, and t
 
 See the build brief in the tracking issue.
 
+## Who this is for
+
+Visitors evaluating Skyphusion Labs and anyone looking for the front door to our open-source projects.
+
+## Links
+
+- **Live site:** https://skyphusion.org
+- **Blog:** https://skyphusion.net
+- **Open source:** https://github.com/skyphusion-labs
+- **Vivijure:** https://vivijure.com
+
 ## License
 
 - **Site code:** [MIT](LICENSE).
