@@ -95,11 +95,19 @@
         "@id": "https://skyphusion.org/#vivijure",
         "name": "Vivijure",
         "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "Cloudflare Workers",
-        "description": "Free, AGPL-3.0 open source AI film studio by Conrad Rockenhaus and Skyphusion Labs. Storyboard, cast, render orchestration, swappable GPU backends, and a CPU container media stack so assembly stays off the GPU bill.",
+        "operatingSystem": "Cloudflare Workers, Linux, macOS, Windows, NVIDIA GPU",
+        "description": "Free, AGPL-3.0 open source AI film studio by Conrad Rockenhaus and Skyphusion Labs. Run the control panel on Cloudflare (vivijure-cf), on a home computer, or on any cloud server (vivijure-local); both hosts share vivijure-core. Storyboard, cast, render orchestration, swappable GPU backends, agent MCP, and a CPU container media stack so assembly stays off the GPU bill.",
         "url": "https://vivijure.com/",
         "downloadUrl": "https://github.com/skyphusion-labs/vivijure",
         "codeRepository": "https://github.com/skyphusion-labs/vivijure",
+        "sameAs": [
+          "https://github.com/skyphusion-labs/vivijure",
+          "https://github.com/skyphusion-labs/vivijure-cf",
+          "https://github.com/skyphusion-labs/vivijure-local",
+          "https://github.com/skyphusion-labs/vivijure-core",
+          "https://github.com/skyphusion-labs/vivijure-mcp",
+          "https://github.com/skyphusion-labs/slate"
+        ],
         "author": { "@id": "https://skyphusion.org/#founder" },
         "publisher": { "@id": "https://skyphusion.org/#organization" },
         "offers": {
@@ -151,9 +159,10 @@
       <h1>We build things<br /><em>you can keep.</em></h1>
       <p class="hero-lede">
         Not for sale. Free use forever, made with love, developed entirely in the open.
-        AGPL tools on the Cloudflare stack and your own silicon: an AI film studio you own,
-        a mailbox for humans and agents, persistent text worlds, and infrastructure held to
-        a punk DIY bar with an aviation-grade finish. No subscriptions. No account walls. Your GPU, your keys, your data.
+        AGPL tools on the Cloudflare stack and your own silicon: an AI film studio you own
+        (control panel on Cloudflare, a home PC, or any cloud server), a mailbox for humans and
+        agents, persistent text worlds, and infrastructure held to a punk DIY bar with an
+        aviation-grade finish. No subscriptions. No account walls. Your GPU, your keys, your data.
       </p>
       <div class="hero-actions">
         <a href="https://vivijure.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
@@ -195,12 +204,16 @@
         <p class="section-eyebrow">Flagship</p>
         <h2 id="flagship-title">Vivijure</h2>
         <p class="section-intro">
-          A self-hosted AI film studio you own, nearing its full public release. The Studio is a thin module host:
-          storyboard, cast, render orchestration, and a typed contract that routes every stage (keyframes,
-          image-to-video, LoRA training, finishing, assembly) through swappable backends. Rent high-end GPU time
-          by the second on serverless, run motion on your own card, call cloud i2v endpoints per shot, and keep
-          everything that does not need a GPU on cheap CPU containers you host
-          (<a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers" target="_blank" rel="noopener noreferrer">vivijure/containers</a>).
+          A self-hosted AI film studio you own, nearing its full public release. Run the control panel on
+          Cloudflare (<a href="https://github.com/skyphusion-labs/vivijure-cf" target="_blank" rel="noopener noreferrer">vivijure-cf</a>),
+          on a home computer, or on any cloud server
+          (<a href="https://github.com/skyphusion-labs/vivijure-local" target="_blank" rel="noopener noreferrer">vivijure-local</a>);
+          both hosts share
+          <a href="https://github.com/skyphusion-labs/vivijure-core" target="_blank" rel="noopener noreferrer">vivijure-core</a>.
+          The Studio is a thin module host: storyboard, cast, render orchestration, and a typed contract that
+          routes every stage through swappable backends. Rent high-end GPU time by the second, run motion on
+          your own card, call cloud i2v endpoints per shot, and keep assembly on cheap CPU containers you host
+          (<a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers" target="_blank" rel="noopener noreferrer">vivijure-cf/containers</a>).
           Meet it at
           <a href="https://vivijure.com" target="_blank" rel="noopener noreferrer">vivijure.com</a>
           or try the
@@ -211,14 +224,19 @@
       <div class="flagship-grid">
         <article class="flagship-card flagship-card--lead">
           <div class="card-meta">
-            <span class="pill pill--cyan">Control plane</span>
-            <span class="pill pill--muted">v0.16</span>
+            <span class="pill pill--cyan">Control panel</span>
+            <span class="pill pill--muted">Two hosts</span>
           </div>
           <h3><a href="https://github.com/skyphusion-labs/vivijure" target="_blank" rel="noopener noreferrer">Vivijure Studio</a></h3>
           <p>
-            The Cloudflare Worker at the center: planner UI, cast management, render history, orchestration,
-            and the module registry. Runs on the Workers free tier. Output validation at both layers so a broken
-            clip fails loud instead of assembling into your film.
+            Not locked to Cloudflare.
+            <a href="https://github.com/skyphusion-labs/vivijure-cf" target="_blank" rel="noopener noreferrer">vivijure-cf</a>
+            runs on Workers;
+            <a href="https://github.com/skyphusion-labs/vivijure-local" target="_blank" rel="noopener noreferrer">vivijure-local</a>
+            runs on a home PC or any cloud server. Shared orchestration lives in
+            <a href="https://github.com/skyphusion-labs/vivijure-core" target="_blank" rel="noopener noreferrer">vivijure-core</a>;
+            agents drive either host with
+            <a href="https://github.com/skyphusion-labs/vivijure-mcp" target="_blank" rel="noopener noreferrer">vivijure-mcp</a>.
           </p>
           <a href="https://github.com/skyphusion-labs/vivijure" class="card-link" target="_blank" rel="noopener noreferrer">
             github.com/skyphusion-labs/vivijure
@@ -248,7 +266,7 @@
           <h3><a href="https://github.com/skyphusion-labs/slate" target="_blank" rel="noopener noreferrer">Slate</a></h3>
           <p>
             The writers' room in Discord. Develop a story with your crew in natural conversation, keep a
-            structured storyboard, and hand the finished bundle to the Studio when you say ship it.
+            structured storyboard, and hand the finished bundle to vivijure-cf or vivijure-local when you say ship it.
           </p>
           <a href="https://github.com/skyphusion-labs/slate" class="card-link" target="_blank" rel="noopener noreferrer">
             github.com/skyphusion-labs/slate
@@ -259,6 +277,38 @@
       <div class="project-rails" style="margin-top: 2rem;">
         <h3 class="rail-title">The constellation</h3>
         <ul class="project-list">
+          <li>
+            <article class="project-card">
+              <div class="card-meta"><span class="pill pill--cyan">Host</span><span class="pill pill--muted">Cloudflare</span></div>
+              <h4><a href="https://github.com/skyphusion-labs/vivijure-cf" target="_blank" rel="noopener noreferrer">vivijure-cf</a></h4>
+              <p>Cloudflare Workers control panel: planner, cast, render UI, JSON API, D1/R2, module workers. Builds on vivijure-core.</p>
+              <a href="https://github.com/skyphusion-labs/vivijure-cf" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <div class="card-meta"><span class="pill pill--cyan">Host</span><span class="pill pill--muted">Self-hosted</span></div>
+              <h4><a href="https://github.com/skyphusion-labs/vivijure-local" target="_blank" rel="noopener noreferrer">vivijure-local</a></h4>
+              <p>Same control panel on a home PC or any cloud server: Node, SQLite, S3/MinIO, Docker. No Cloudflare account required.</p>
+              <a href="https://github.com/skyphusion-labs/vivijure-local" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <div class="card-meta"><span class="pill pill--amber">Shared</span><span class="pill pill--muted">Library</span></div>
+              <h4><a href="https://github.com/skyphusion-labs/vivijure-core" target="_blank" rel="noopener noreferrer">vivijure-core</a></h4>
+              <p>Shared orchestration both control panels consume: module registry, film pipeline, Platform ICD.</p>
+              <a href="https://github.com/skyphusion-labs/vivijure-core" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <div class="card-meta"><span class="pill pill--amber">Agents</span><span class="pill pill--muted">MCP</span></div>
+              <h4><a href="https://github.com/skyphusion-labs/vivijure-mcp" target="_blank" rel="noopener noreferrer">vivijure-mcp</a></h4>
+              <p>Drive the studio API from Claude, Cursor, or any MCP client. Works with vivijure-cf and vivijure-local.</p>
+              <a href="https://github.com/skyphusion-labs/vivijure-mcp" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+            </article>
+          </li>
           <li>
             <article class="project-card">
               <div class="card-meta"><span class="pill pill--cyan">Own GPU</span><span class="pill pill--muted">12GB LTX</span></div>
@@ -306,50 +356,50 @@
         <h3 class="rail-title">CPU media stack (your iron, not your GPU bill)</h3>
         <p class="rail-intro" style="margin: 0 0 1.25rem 0; max-width: 72ch; color: var(--muted, #8892a6); font-size: 0.9375rem; line-height: 1.6;">
           Five always-on Docker services in
-          <a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers" target="_blank" rel="noopener noreferrer">vivijure/containers</a>,
-          reached from the Studio over Workers VPC. The Worker presigns R2 URLs; the containers stay stateless and
-          credential-free. GPU money goes to diffusion; concat, mux, captions, portrait prep, beat sync, and
-          loudness work run on CPU.
+          <a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers" target="_blank" rel="noopener noreferrer">vivijure-cf/containers</a>
+          (also used by the self-hosted host). On Cloudflare they are reached over Workers VPC; the host
+          presigns object-store URLs and the containers stay stateless and credential-free. GPU money goes
+          to diffusion; concat, mux, captions, portrait prep, beat sync, and loudness work run on CPU.
         </p>
         <ul class="project-list">
           <li>
             <article class="project-card">
               <div class="card-meta"><span class="pill pill--muted">CPU</span><span class="pill pill--muted">ffmpeg</span></div>
-              <h4><a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers/video-finish" target="_blank" rel="noopener noreferrer">video-finish</a></h4>
+              <h4><a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/video-finish" target="_blank" rel="noopener noreferrer">video-finish</a></h4>
               <p>Concat per-shot clips, mux the audio bed, burn captions, title cards, and credits. The off-GPU tail of the pipeline.</p>
-              <a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers/video-finish" class="card-link" target="_blank" rel="noopener noreferrer">View docs →</a>
+              <a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/video-finish" class="card-link" target="_blank" rel="noopener noreferrer">View docs →</a>
             </article>
           </li>
           <li>
             <article class="project-card">
               <div class="card-meta"><span class="pill pill--muted">CPU</span><span class="pill pill--muted">rembg</span></div>
-              <h4><a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers/image-prep" target="_blank" rel="noopener noreferrer">image-prep</a></h4>
+              <h4><a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/image-prep" target="_blank" rel="noopener noreferrer">image-prep</a></h4>
               <p>Background removal for cast portraits before keyframe generation. Sharper cutouts, cleaner LoRA conditioning.</p>
-              <a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers/image-prep" class="card-link" target="_blank" rel="noopener noreferrer">View docs →</a>
+              <a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/image-prep" class="card-link" target="_blank" rel="noopener noreferrer">View docs →</a>
             </article>
           </li>
           <li>
             <article class="project-card">
               <div class="card-meta"><span class="pill pill--muted">CPU</span><span class="pill pill--muted">librosa</span></div>
-              <h4><a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers/audio-beat-sync" target="_blank" rel="noopener noreferrer">audio-beat-sync</a></h4>
+              <h4><a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/audio-beat-sync" target="_blank" rel="noopener noreferrer">audio-beat-sync</a></h4>
               <p>Beat-aware cutting when a film carries a music bed: shot boundaries land on musical beats, not arbitrary seconds.</p>
-              <a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers/audio-beat-sync" class="card-link" target="_blank" rel="noopener noreferrer">View docs →</a>
+              <a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/audio-beat-sync" class="card-link" target="_blank" rel="noopener noreferrer">View docs →</a>
             </article>
           </li>
           <li>
             <article class="project-card">
               <div class="card-meta"><span class="pill pill--muted">CPU</span><span class="pill pill--muted">ffmpeg</span></div>
-              <h4><a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers/audio-master" target="_blank" rel="noopener noreferrer">audio-master</a></h4>
+              <h4><a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/audio-master" target="_blank" rel="noopener noreferrer">audio-master</a></h4>
               <p>Film-level audio mastering: optional music upscale plus two-pass LUFS loudnorm before mux.</p>
-              <a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers/audio-master" class="card-link" target="_blank" rel="noopener noreferrer">View docs →</a>
+              <a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/audio-master" class="card-link" target="_blank" rel="noopener noreferrer">View docs →</a>
             </article>
           </li>
           <li>
             <article class="project-card">
               <div class="card-meta"><span class="pill pill--muted">CPU</span><span class="pill pill--muted">ffmpeg</span></div>
-              <h4><a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers/audio-mix" target="_blank" rel="noopener noreferrer">audio-mix</a></h4>
+              <h4><a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/audio-mix" target="_blank" rel="noopener noreferrer">audio-mix</a></h4>
               <p>Multi-track mix with sidechain duck and loudnorm. Built; wiring into the assemble path is the tracked follow-up.</p>
-              <a href="https://github.com/skyphusion-labs/vivijure/tree/main/containers/audio-mix" class="card-link" target="_blank" rel="noopener noreferrer">View docs →</a>
+              <a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/audio-mix" class="card-link" target="_blank" rel="noopener noreferrer">View docs →</a>
             </article>
           </li>
         </ul>
