@@ -10,6 +10,8 @@ export interface Env {
 
 const CANONICAL_HOST = "skyphusion.org";
 
+const HSTS = "max-age=15552000; includeSubDomains; preload";
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
@@ -21,9 +23,20 @@ export default {
 
     if (url.pathname === "/health") {
       return new Response(JSON.stringify({ ok: true, service: "skyphusion-org" }), {
-        headers: { "content-type": "application/json; charset=utf-8" },
+        headers: {
+          "content-type": "application/json; charset=utf-8",
+          "strict-transport-security": HSTS,
+        },
       });
     }
-    return env.ASSETS.fetch(request);
+
+    const asset = await env.ASSETS.fetch(request);
+    const headers = new Headers(asset.headers);
+    headers.set("strict-transport-security", HSTS);
+    return new Response(asset.body, {
+      status: asset.status,
+      statusText: asset.statusText,
+      headers,
+    });
   },
 };

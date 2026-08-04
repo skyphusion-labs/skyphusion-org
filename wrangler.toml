@@ -8,8 +8,9 @@ main = "src/index.ts"
 compatibility_date = "2026-06-01"
 compatibility_flags = ["nodejs_compat"]
 
-# The static site.
-assets = { directory = "./public", binding = "ASSETS" }
+# The static site. run_worker_first so www -> apex 301 and /health hit the Worker
+# before ASSETS answers (otherwise www can 200 the same HTML as apex).
+assets = { directory = "./public", binding = "ASSETS", run_worker_first = true }
 
 [observability]
 enabled = true

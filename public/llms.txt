@@ -1,0 +1,19 @@
+# skyphusion.org
+
+> Skyphusion Labs: free AGPL open source tools you own. Not for sale.
+
+## Products
+- Vivijure (self-hosted AI film studio, v1.0): https://vivijure.com
+- Vivijure demo: https://demo.vivijure.com
+- Postern (mailbox for humans and agents, v1.4): https://github.com/skyphusion-labs/postern
+- Postern demo: https://demo.posternonline.com
+- Prism (multimodal AI, public BYOK): https://play.skyphusion.org
+- The Hollow Grid: https://hollow.skyphusion.org
+- security-audit: https://github.com/skyphusion-labs/security-audit
+- search-mcp: https://github.com/skyphusion-labs/search-mcp
+
+## More
+- Engineering blog: https://skyphusion.net
+- GitHub org: https://github.com/skyphusion-labs
+- Org profile page: https://github.skyphusion.org
+- Conrad: https://github.com/skyphusion
