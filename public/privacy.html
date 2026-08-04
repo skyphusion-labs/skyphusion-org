@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy notice | Skyphusion Labs</title>
+  <meta name="description" content="Privacy notice for skyphusion.org: a static intro site. No accounts, no cookies, no ad-tech. Self-hosted cookieless Umami for aggregate traffic only." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Conrad Rockenhaus" />
+  <meta name="theme-color" content="#0a0f1e" />
+  <link rel="canonical" href="https://skyphusion.org/privacy" />
+  <link rel="icon" href="/logo-icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/logo-icon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Skyphusion Labs" />
+  <meta property="og:title" content="Privacy notice | Skyphusion Labs" />
+  <meta property="og:description" content="We do not want your data. skyphusion.org is static: no accounts, no cookies, no ad-tech. Cookieless self-hosted analytics for aggregate traffic only." />
+  <meta property="og:url" content="https://skyphusion.org/privacy" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://skyphusion.org/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@skyphusion" />
+  <meta name="twitter:title" content="Privacy notice | Skyphusion Labs" />
+  <meta name="twitter:description" content="We do not want your data. skyphusion.org is static: no accounts, no cookies, no ad-tech." />
+  <meta name="twitter:image" content="https://skyphusion.org/og-image.png" />
+  <link rel="stylesheet" href="/fonts.css" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="grid-field"></div>
+    <div class="glow glow--left"></div>
+    <div class="glow glow--right"></div>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="page-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/#projects" class="nav-link">Projects</a>
+      <a href="/#team" class="nav-link">Team</a>
+      <a href="https://skyphusion.net" class="nav-link nav-link--accent" target="_blank" rel="noopener noreferrer">Blog</a>
+      <a href="/privacy" class="nav-link" aria-current="page">Privacy</a>
+    </nav>
+  </header>
+
+  <main id="main" class="legal-page">
+    <p class="legal-kicker">skyphusion.org</p>
+    <h1>Privacy notice</h1>
+    <p class="legal-lede">
+      <strong>Scope.</strong> This notice covers the intro site that Skyphusion Labs operates at
+      <strong>skyphusion.org</strong> (and www.skyphusion.org, which redirects to it). It does not cover
+      the projects this site links to; each of those has its own notice (Prism, The Hollow Grid, Vivijure,
+      Postern). The site source is public and MIT-licensed: if you reuse it, you are the operator of your
+      copy and this notice does not bind you. This is a plain-language description of how the site handles
+      data. It is not legal advice.
+    </p>
+
+    <h2>We do not want your data</h2>
+    <p>
+      skyphusion.org is a static intro site. There are no accounts, no sign-in, no forms, no comments, and
+      nothing for you to submit. We set no cookies, we use no localStorage or sessionStorage, and there is
+      no advertising, ad-tech, profiling, or third-party tracker on the page. The fonts are served from this
+      site rather than from a font CDN, so reading a page here does not announce your visit to a font
+      vendor. The only outbound requests a page makes are the ones you click.
+    </p>
+
+    <h2>The one thing we measure, and how</h2>
+    <p>
+      The site loads a script from <strong>analytics.skyphusion.org</strong>. That is <strong>Umami</strong>,
+      an open-source analytics tool that we run ourselves, on our own infrastructure. We use it for aggregate
+      traffic counts (which pages get read), and for nothing else.
+    </p>
+    <ul>
+      <li>
+        It is <strong>cookieless</strong>: it sets no cookie and no persistent identifier to follow you
+        between visits.
+      </li>
+      <li>
+        It records the page you viewed, the page that referred you, and the coarse technical details your
+        browser volunteers (browser, operating system, device type, and a country derived from your IP
+        address at request time).
+      </li>
+      <li>
+        It is <strong>self-hosted</strong>, so no analytics vendor receives any of it. There is no third
+        party in this path to sell it to, and we do not sell or share it.
+      </li>
+      <li>It is not used to profile or identify individual visitors.</li>
+    </ul>
+    <p>
+      If you would rather not be counted, any content blocker will stop the script from loading; the site
+      works fine without it.
+    </p>
+
+    <h2>Cloudflare serves this site</h2>
+    <p>
+      The site runs as a Cloudflare Worker, so Cloudflare necessarily processes your request (including your
+      IP address) to route it, serve the page, and protect the site from abuse. That processing is
+      Cloudflare's, under Cloudflare's terms, as our infrastructure provider. We keep Workers request logs
+      in our own Cloudflare account for operational purposes: knowing the site is up, and debugging it when
+      it is not. We do not mine them, and there is no other processor in the path.
+    </p>
+
+    <h2>What we never do</h2>
+    <p>
+      No selling. No sharing with data brokers. No ad-tech. No profiling. No cross-site tracking. No mailing
+      list you did not ask for, because there is no form with which to ask you.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      The site is operated by Skyphusion Labs. Privacy questions:
+      <a href="mailto:privacy@skyphusion.org"><strong>privacy@skyphusion.org</strong></a>.
+    </p>
+    <p>Not legal advice.</p>
+
+    <p class="legal-source">
+      Source of this notice:
+      <a href="https://github.com/skyphusion-labs/skyphusion-org/blob/main/docs/legal/PRIVACY.md">docs/legal/PRIVACY.md</a>
+      in the public repo. Keep the HTML page and that file in lockstep when either changes.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="/logo-icon.svg" alt="" width="32" height="32" aria-hidden="true" />
+        <div>
+          <strong>Skyphusion Labs</strong>
+          <p>Free, open source software for people who would rather own it than rent it. Built by Conrad Rockenhaus and crew.</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/privacy" aria-current="page">Privacy</a>
+        <a href="https://github.com/skyphusion-labs" target="_blank" rel="noopener noreferrer">GitHub org</a>
+        <a href="https://skyphusion.net" target="_blank" rel="noopener noreferrer">Engineering blog</a>
+        <a href="mailto:conrad@skyphusion.org">conrad@skyphusion.org</a>
+      </nav>
+    </div>
+    <p class="footer-note">
+      Built and served from a Cloudflare Worker. No framework. No build step. Just HTML, CSS, and conviction.
+    </p>
+    <p class="footer-analytics">
+      Cookieless analytics (self-hosted) for aggregate traffic only; no individual tracking or ad-tech.
+      <a href="/privacy">Privacy notice</a>.
+    </p>
+  </footer>
+
+  <script src="/main.js" defer></script>
+  <!-- Umami OSS marketing analytics (self-hosted). website-id: fleet-chezmoi/system/umami/websites.json -->
+  <script defer src="https://analytics.skyphusion.org/script.js" data-website-id="a84616c8-21fd-408c-8814-d2a3bea02bda"></script>
+</body>
+</html>
