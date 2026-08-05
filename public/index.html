@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skyphusion Labs | Free AGPL open source software by Conrad Rockenhaus</title>
-  <meta name="description" content="Skyphusion Labs builds free, open source software that is not for sale: the Vivijure AI film studio, Postern mailbox, The Hollow Grid MUD, Common Thread, and more. AGPL-3.0, never gated, your data stays yours. By Conrad Rockenhaus and crew." />
+  <meta name="description" content="Skyphusion Labs builds free, open source software that is not for sale: Vivijure (self-hosted AI film studio), Postern (mailbox for humans and agents), Prism (public BYOK playground), The Hollow Grid, and tooling. AGPL-3.0, your data stays yours. By Conrad Rockenhaus and crew." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="Conrad Rockenhaus" />
   <meta name="theme-color" content="#0a0f1e" />
@@ -23,7 +23,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Skyphusion Labs" />
   <meta property="og:title" content="Skyphusion Labs | Free AGPL open source software by Conrad Rockenhaus" />
-  <meta property="og:description" content="Free use forever, made with love, developed in the open. Vivijure AI film studio, Postern mailbox, The Hollow Grid, Common Thread, and more. No subscriptions. No lock-in. Your GPU, your keys, your data." />
+  <meta property="og:description" content="Free use forever, developed in the open. Vivijure AI film studio, Postern mailbox, Prism BYOK playground, The Hollow Grid, and more. No lock-in. Your GPU, your keys, your data." />
   <meta property="og:url" content="https://skyphusion.org/" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://skyphusion.org/og-image.png" />
@@ -35,7 +35,7 @@
   <meta name="twitter:site" content="@skyphusion" />
   <meta name="twitter:creator" content="@skyphusion" />
   <meta name="twitter:title" content="Skyphusion Labs | Free AGPL open source software by Conrad Rockenhaus" />
-  <meta name="twitter:description" content="Free use forever, made with love, developed in the open. Vivijure AI film studio, Postern mailbox, The Hollow Grid, Common Thread, and more." />
+  <meta name="twitter:description" content="Free use forever, developed in the open. Vivijure, Postern, Prism, The Hollow Grid, and Labs tooling. No lock-in." />
   <meta name="twitter:image" content="https://skyphusion.org/og-image.png" />
   <meta name="twitter:image:alt" content="Skyphusion Labs | We build things you can keep." />
   <script type="application/ld+json">
@@ -47,7 +47,7 @@
         "@id": "https://skyphusion.org/#website",
         "url": "https://skyphusion.org/",
         "name": "Skyphusion Labs",
-        "description": "Free, open source software that is not for sale. Vivijure AI film studio, Postern mailbox, The Hollow Grid, Common Thread, and more.",
+        "description": "Free, open source software that is not for sale. Vivijure AI film studio, Postern mailbox, Prism playground, The Hollow Grid, and more.",
         "inLanguage": "en-US",
         "publisher": { "@id": "https://skyphusion.org/#organization" }
       },
@@ -61,7 +61,7 @@
           "@type": "ImageObject",
           "url": "https://skyphusion.org/logo-icon.svg"
         },
-        "description": "Skyphusion Labs builds free, AGPL-3.0 open source software for people who want to own what they run: AI film production, email for humans and agents, persistent text worlds, and edge-native infrastructure.",
+        "description": "Skyphusion Labs builds free, AGPL-3.0 open source software for people who want to own what they run: AI film production, email for humans and agents, multimodal AI playgrounds, persistent text worlds, and edge-native infrastructure.",
         "founder": { "@id": "https://skyphusion.org/#founder" },
         "sameAs": [
           "https://github.com/skyphusion-labs",
@@ -72,7 +72,9 @@
           "https://x.com/skyphusion",
           "https://www.linkedin.com/in/skyphusion/",
           "https://vivijure.com",
-          "https://demo.vivijure.com"
+          "https://demo.vivijure.com",
+          "https://demo.posternonline.com",
+          "https://play.skyphusion.org"
         ]
       },
       {
@@ -99,16 +101,19 @@
         "name": "Vivijure",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Cloudflare Workers, Linux, macOS, Windows, NVIDIA GPU",
-        "description": "Free, AGPL-3.0 open source AI film studio by Conrad Rockenhaus and Skyphusion Labs. Run the control panel on Cloudflare (vivijure-cf), on a home computer, or on any cloud server (vivijure-local); both hosts share vivijure-core. Storyboard, cast, render orchestration, swappable GPU backends, agent MCP, and a CPU container media stack so assembly stays off the GPU bill.",
+        "description": "Free, AGPL-3.0 open source AI film studio (Studio 1.0 open train). Dual-panel hosts (vivijure-cf and vivijure-local) on vivijure-core, agent MCP, cast LoRAs including working Wan dual-expert train, own-GPU and RunPod doors, finish chain, and CPU media stack.",
         "url": "https://vivijure.com/",
         "downloadUrl": "https://github.com/skyphusion-labs/vivijure",
         "codeRepository": "https://github.com/skyphusion-labs/vivijure",
+        "softwareVersion": "1.0",
         "sameAs": [
           "https://github.com/skyphusion-labs/vivijure",
           "https://github.com/skyphusion-labs/vivijure-cf",
           "https://github.com/skyphusion-labs/vivijure-local",
           "https://github.com/skyphusion-labs/vivijure-core",
           "https://github.com/skyphusion-labs/vivijure-mcp",
+          "https://github.com/skyphusion-labs/vivijure-backend",
+          "https://github.com/skyphusion-labs/vivijure-wan-train",
           "https://github.com/skyphusion-labs/slate"
         ],
         "author": { "@id": "https://skyphusion.org/#founder" },
@@ -121,11 +126,40 @@
         "license": "https://www.gnu.org/licenses/agpl-3.0.html"
       },
       {
+        "@type": "SoftwareApplication",
+        "@id": "https://skyphusion.org/#postern",
+        "name": "Postern",
+        "applicationCategory": "CommunicationApplication",
+        "operatingSystem": "Cloudflare Workers",
+        "description": "Self-hostable mailbox for humans and agents on Cloudflare: send, receive, search, webmail, IMAP, MCP. Identity-bound credentials so each person or agent sends and reads as themselves.",
+        "url": "https://demo.posternonline.com/",
+        "codeRepository": "https://github.com/skyphusion-labs/postern",
+        "softwareVersion": "1.4.3",
+        "author": { "@id": "https://skyphusion.org/#founder" },
+        "publisher": { "@id": "https://skyphusion.org/#organization" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "license": "https://www.gnu.org/licenses/agpl-3.0.html"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://skyphusion.org/#prism",
+        "name": "Prism",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Cloudflare Workers",
+        "description": "Multimodal AI playground: public signup, per-user AI Gateway BYOK, chat, voice, image, video, music, RAG, and web search.",
+        "url": "https://play.skyphusion.org/",
+        "codeRepository": "https://github.com/skyphusion-labs/prism",
+        "author": { "@id": "https://skyphusion.org/#founder" },
+        "publisher": { "@id": "https://skyphusion.org/#organization" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "license": "https://www.gnu.org/licenses/agpl-3.0.html"
+      },
+      {
         "@type": "WebPage",
         "@id": "https://skyphusion.org/#webpage",
         "url": "https://skyphusion.org/",
         "name": "Skyphusion Labs | Free AGPL open source software by Conrad Rockenhaus",
-        "description": "Skyphusion Labs builds free, open source software that is not for sale: the Vivijure AI film studio, Postern mailbox, The Hollow Grid MUD, Common Thread, and more.",
+        "description": "Skyphusion Labs builds free, open source software that is not for sale: Vivijure, Postern, Prism, The Hollow Grid, and more.",
         "isPartOf": { "@id": "https://skyphusion.org/#website" },
         "about": { "@id": "https://skyphusion.org/#organization" },
         "inLanguage": "en-US"
@@ -149,8 +183,10 @@
 
   <header class="hero">
     <nav class="nav" aria-label="Primary">
-      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#flagship" class="nav-link">Vivijure</a>
       <a href="#postern" class="nav-link">Postern</a>
+      <a href="#prism" class="nav-link">Prism</a>
+      <a href="#projects" class="nav-link">Worlds</a>
       <a href="#team" class="nav-link">Team</a>
       <a href="#ethos" class="nav-link">Ethos</a>
       <a href="https://skyphusion.net" class="nav-link nav-link--accent" target="_blank" rel="noopener noreferrer">Blog</a>
@@ -161,22 +197,25 @@
       <p class="hero-eyebrow">skyphusion-labs / open source</p>
       <h1>We build things<br /><em>you can keep.</em></h1>
       <p class="hero-lede">
-        Not for sale. Free use forever, made with love, developed entirely in the open.
-        AGPL tools on the Cloudflare stack and your own silicon: an AI film studio you own
-        (control panel on Cloudflare, a home PC, or any cloud server), a mailbox for humans and
-        agents, persistent text worlds, and infrastructure held to a punk DIY bar with an
-        aviation-grade finish. No subscriptions. No account walls. Your GPU, your keys, your data.
+        Not for sale. Free use forever, developed entirely in the open. Product focus is
+        <strong>Vivijure</strong> (self-hosted AI film studio: Cloudflare or your machine, dual-panel
+        parity) and <strong>Postern</strong> (mailbox for humans and agents, identity-bound). Also
+        Prism (public BYOK playground), The Hollow Grid, and AGPL tooling. Punk DIY bar with an
+        aviation-grade finish. No account walls. Your GPU, your keys, your data.
       </p>
       <div class="hero-actions">
         <a href="https://vivijure.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
           <span class="btn-label">Meet Vivijure</span>
           <span class="btn-arrow" aria-hidden="true">→</span>
         </a>
+        <a href="https://demo.posternonline.com" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+          Postern demo
+        </a>
+        <a href="https://play.skyphusion.org" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+          Try Prism
+        </a>
         <a href="https://github.com/skyphusion-labs" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
           Explore on GitHub
-        </a>
-        <a href="https://skyphusion.net" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
-          Read the blog
         </a>
       </div>
     </div>
@@ -184,7 +223,7 @@
     <dl class="hero-stats" aria-label="Studio snapshot">
       <div class="stat">
         <dt>Projects</dt>
-        <dd>14</dd>
+        <dd>20+</dd>
       </div>
       <div class="stat">
         <dt>License</dt>
@@ -202,23 +241,23 @@
   </header>
 
   <main id="main">
-    <section class="flagship" aria-labelledby="flagship-title">
+    <section id="flagship" class="flagship" aria-labelledby="flagship-title">
       <div class="section-head">
         <p class="section-eyebrow">Flagship</p>
         <h2 id="flagship-title">Vivijure</h2>
         <p class="section-intro">
-          A self-hosted AI film studio you own, now at
-          <strong>v1.0.0</strong>. Run the control panel on
-          Cloudflare (<a href="https://github.com/skyphusion-labs/vivijure-cf" target="_blank" rel="noopener noreferrer">vivijure-cf</a>),
-          on a home computer, or on any cloud server
+          A self-hosted AI film studio you own:
+          <strong>Studio 1.0</strong> on an open host train with dual-panel parity. Run the control
+          panel on Cloudflare
+          (<a href="https://github.com/skyphusion-labs/vivijure-cf" target="_blank" rel="noopener noreferrer">vivijure-cf</a>)
+          or on a home computer / any cloud server
           (<a href="https://github.com/skyphusion-labs/vivijure-local" target="_blank" rel="noopener noreferrer">vivijure-local</a>);
-          both hosts share
-          <a href="https://github.com/skyphusion-labs/vivijure-core" target="_blank" rel="noopener noreferrer">vivijure-core</a>.
-          The Studio is a thin module host: storyboard, cast, render orchestration, and a typed contract that
-          routes every stage through swappable backends. Rent high-end GPU time by the second, run motion on
-          your own card, call cloud i2v endpoints per shot, and keep assembly on cheap CPU containers you host
-          (<a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers" target="_blank" rel="noopener noreferrer">vivijure-cf/containers</a>).
-          Meet it at
+          both share
+          <a href="https://github.com/skyphusion-labs/vivijure-core" target="_blank" rel="noopener noreferrer">vivijure-core</a>
+          and ship studio features in the same release wave. Thin module host: storyboard, cast
+          (SDXL + working Wan dual-expert LoRAs), render orchestration, agent MCP, finish chain.
+          Rent GPU time on RunPod, run motion on your own card (LTX 12GB or CogVideoX 16GB), call
+          cloud i2v per shot, assemble on CPU containers you host. Meet it at
           <a href="https://vivijure.com" target="_blank" rel="noopener noreferrer">vivijure.com</a>
           or try the
           <a href="https://demo.vivijure.com" target="_blank" rel="noopener noreferrer">live demo</a>.
@@ -237,10 +276,12 @@
             <a href="https://github.com/skyphusion-labs/vivijure-cf" target="_blank" rel="noopener noreferrer">vivijure-cf</a>
             runs on Workers;
             <a href="https://github.com/skyphusion-labs/vivijure-local" target="_blank" rel="noopener noreferrer">vivijure-local</a>
-            runs on a home PC or any cloud server. Shared orchestration lives in
+            runs on a home PC or any cloud server. Same features, same wave (dual-panel parity).
+            Shared orchestration in
             <a href="https://github.com/skyphusion-labs/vivijure-core" target="_blank" rel="noopener noreferrer">vivijure-core</a>;
             agents drive either host with
-            <a href="https://github.com/skyphusion-labs/vivijure-mcp" target="_blank" rel="noopener noreferrer">vivijure-mcp</a>.
+            <a href="https://github.com/skyphusion-labs/vivijure-mcp" target="_blank" rel="noopener noreferrer">vivijure-mcp</a>
+            (cast, storyboard, uploads, library, artifacts).
           </p>
           <a href="https://github.com/skyphusion-labs/vivijure" class="card-link" target="_blank" rel="noopener noreferrer">
             github.com/skyphusion-labs/vivijure
@@ -254,7 +295,8 @@
           </div>
           <h3><a href="https://github.com/skyphusion-labs/vivijure-backend" target="_blank" rel="noopener noreferrer">Vivijure Backend</a></h3>
           <p>
-            RunPod serverless GPU engine: LoRA training, SDXL keyframes, Wan image-to-video. Every model baked
+            RunPod serverless GPU engine: SDXL cast LoRAs and keyframes, Wan image-to-video (with dual-expert
+            Wan cast adapters from wan-train), quality tiers, finish helpers, ffmpeg assembly. Models baked
             offline; the release gate renders a real film before it promotes an image.
           </p>
           <a href="https://github.com/skyphusion-labs/vivijure-backend" class="card-link" target="_blank" rel="noopener noreferrer">
@@ -269,8 +311,9 @@
           </div>
           <h3><a href="https://github.com/skyphusion-labs/slate" target="_blank" rel="noopener noreferrer">Slate</a></h3>
           <p>
-            The writers' room in Discord. Develop a story with your crew in natural conversation, keep a
-            structured storyboard, and hand the finished bundle to vivijure-cf or vivijure-local when you say ship it.
+            The writers' room in Discord. Co-write a story, keep a structured storyboard, and ship to
+            vivijure-cf or vivijure-local. Session memory and a traffic ledger keep cast, brief, and
+            recent studio work searchable mid-conversation.
           </p>
           <a href="https://github.com/skyphusion-labs/slate" class="card-link" target="_blank" rel="noopener noreferrer">
             github.com/skyphusion-labs/slate
@@ -309,15 +352,23 @@
             <article class="project-card">
               <div class="card-meta"><span class="pill pill--amber">Agents</span><span class="pill pill--muted">MCP</span></div>
               <h4><a href="https://github.com/skyphusion-labs/vivijure-mcp" target="_blank" rel="noopener noreferrer">vivijure-mcp</a></h4>
-              <p>Drive the studio API from Claude, Cursor, or any MCP client. Works with vivijure-cf and vivijure-local.</p>
+              <p>Drive the studio API from Claude, Cursor, or any MCP client: cast, storyboard, uploads, render library, artifacts. Works with both hosts.</p>
               <a href="https://github.com/skyphusion-labs/vivijure-mcp" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <div class="card-meta"><span class="pill pill--amber">Hosted</span><span class="pill pill--muted">Optional</span></div>
+              <h4><a href="https://github.com/skyphusion-labs/vivijure-control-plane" target="_blank" rel="noopener noreferrer">vivijure-control-plane</a></h4>
+              <p>Optional multi-tenant provisioner: accounts and one full studio per tenant from the published studio release. You never need this to self-host; same AGPL.</p>
+              <a href="https://github.com/skyphusion-labs/vivijure-control-plane" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
             </article>
           </li>
           <li>
             <article class="project-card">
               <div class="card-meta"><span class="pill pill--cyan">Own GPU</span><span class="pill pill--muted">12GB LTX</span></div>
               <h4><a href="https://github.com/skyphusion-labs/vivijure-local-12gb" target="_blank" rel="noopener noreferrer">vivijure-local-12gb</a></h4>
-              <p>Image-to-video on a single consumer card with a proven 12GB floor. No rent, reached over a Cloudflare tunnel.</p>
+              <p>Speed door: LTX-Video image-to-video on a single 12GB consumer card. No cloud rent, reached over a tunnel.</p>
               <a href="https://github.com/skyphusion-labs/vivijure-local-12gb" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
             </article>
           </li>
@@ -325,15 +376,23 @@
             <article class="project-card">
               <div class="card-meta"><span class="pill pill--cyan">Own GPU</span><span class="pill pill--muted">16GB CogVideoX</span></div>
               <h4><a href="https://github.com/skyphusion-labs/vivijure-local-16gb" target="_blank" rel="noopener noreferrer">vivijure-local-16gb</a></h4>
-              <p>The fidelity door: CogVideoX-5B-I2V on a proven 16GB consumer GPU, measured on real silicon.</p>
+              <p>Fidelity door: CogVideoX-5B image-to-video on a proven 16GB consumer GPU (production-ready).</p>
               <a href="https://github.com/skyphusion-labs/vivijure-local-16gb" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <div class="card-meta"><span class="pill pill--violet">Cast</span><span class="pill pill--muted">Wan train</span></div>
+              <h4><a href="https://github.com/skyphusion-labs/vivijure-wan-train" target="_blank" rel="noopener noreferrer">vivijure-wan-train</a></h4>
+              <p>Working satellite: Wan 2.2 A14B dual-expert character LoRA training for cloud image-to-video. Studio harvests high/low noise keys; render applies them at i2v time.</p>
+              <a href="https://github.com/skyphusion-labs/vivijure-wan-train" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
             </article>
           </li>
           <li>
             <article class="project-card">
               <div class="card-meta"><span class="pill pill--violet">Finish</span><span class="pill pill--muted">Lip-sync</span></div>
               <h4><a href="https://github.com/skyphusion-labs/vivijure-musetalk" target="_blank" rel="noopener noreferrer">vivijure-musetalk</a></h4>
-              <p>MuseTalk lip-sync on RunPod: give it a face clip and an audio track, get back a mouth that matches the words.</p>
+              <p>MuseTalk lip-sync on RunPod: face clip + audio track, mouth that matches the words.</p>
               <a href="https://github.com/skyphusion-labs/vivijure-musetalk" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
             </article>
           </li>
@@ -402,7 +461,7 @@
             <article class="project-card">
               <div class="card-meta"><span class="pill pill--muted">CPU</span><span class="pill pill--muted">ffmpeg</span></div>
               <h4><a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/audio-mix" target="_blank" rel="noopener noreferrer">audio-mix</a></h4>
-              <p>Multi-track mix with sidechain duck and loudnorm. Built; wiring into the assemble path is the tracked follow-up.</p>
+              <p>Multi-track mix with sidechain duck and loudnorm on the mux path. Optional: degrades to single-track when the VPC binding is off.</p>
               <a href="https://github.com/skyphusion-labs/vivijure-cf/tree/main/containers/audio-mix" class="card-link" target="_blank" rel="noopener noreferrer">View docs →</a>
             </article>
           </li>
@@ -412,23 +471,25 @@
       <dl class="member-facts" style="margin-top: 2rem;">
         <div>
           <dt>Recent milestones</dt>
-          <dd>Studio <strong>v1.0.0</strong> is out: control panel on Cloudflare or any server, shared vivijure-core, agent MCP, own-GPU and RunPod doors, finish chain, and end-to-end films (silent, scored, narrated, talking character). Product site and showcase at <a href="https://vivijure.com" target="_blank" rel="noopener noreferrer">vivijure.com</a>.</dd>
+          <dd>Studio <strong>1.0</strong> open train: dual-panel parity, agent MCP, working Wan cast train, LTX 12GB + CogVideoX 16GB own-GPU doors, finish chain, end-to-end films (silent, scored, narrated, talking character). Product site: <a href="https://vivijure.com" target="_blank" rel="noopener noreferrer">vivijure.com</a>.</dd>
         </div>
         <div>
           <dt>Read more</dt>
-          <dd><a href="https://skyphusion.net/blog/vivijure-run-anywhere/" target="_blank" rel="noopener noreferrer">Runs anywhere</a> · <a href="https://skyphusion.net/blog/vivijure-constellation/" target="_blank" rel="noopener noreferrer">Constellation map</a></dd>
+          <dd><a href="https://skyphusion.net/blog/vivijure-run-anywhere/" target="_blank" rel="noopener noreferrer">Runs anywhere</a> · <a href="https://skyphusion.net/blog/vivijure-constellation/" target="_blank" rel="noopener noreferrer">Constellation map</a> · <a href="https://skyphusion.net/blog/vivijure-talking-character/" target="_blank" rel="noopener noreferrer">Talking character</a></dd>
         </div>
       </dl>
     </section>
 
     <section id="postern" class="flagship" aria-labelledby="postern-title">
       <div class="section-head">
-        <p class="section-eyebrow">Infrastructure</p>
+        <p class="section-eyebrow">Flagship</p>
         <h2 id="postern-title">Postern</h2>
         <p class="section-intro">
           Email for humans and agents. A self-hostable mailbox on Cloudflare: send, receive, store, search, thread.
+          <strong>Identity-bound credentials</strong> so each person or agent reads and sends as themselves.
           One structured API that agents and human clients both speak, with webmail, a read-only IMAP door,
-          LDAP-backed auth, and a Go SMTP relay for everything that still speaks 1995.
+          LDAP-backed auth, and a Go SMTP relay for everything that still speaks 1995. Live demo:
+          <a href="https://demo.posternonline.com" target="_blank" rel="noopener noreferrer">demo.posternonline.com</a>.
         </p>
       </div>
 
@@ -436,15 +497,18 @@
         <article class="flagship-card flagship-card--lead">
           <div class="card-meta">
             <span class="pill pill--gold">Mailbox</span>
-            <span class="pill pill--muted">AGPL</span>
+            <span class="pill pill--muted">AGPL · v1.4</span>
           </div>
           <h3><a href="https://github.com/skyphusion-labs/postern" target="_blank" rel="noopener noreferrer">Postern</a></h3>
           <p>
             Inbound via Email Routing, outbound via Email Sending, storage in D1 and R2, optional semantic search
-            in Vectorize. Webmail and IMAP are read-only doors onto the same store; sending stays on the structured
-            API so nothing drifts.
+            in Vectorize. Webmail and IMAP are doors onto the same store; sending stays on the structured
+            API so nothing drifts. Public product landing and SEO at the demo host.
           </p>
-          <a href="https://github.com/skyphusion-labs/postern" class="card-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://demo.posternonline.com" class="card-link" target="_blank" rel="noopener noreferrer">
+            demo.posternonline.com
+          </a>
+          <a href="https://github.com/skyphusion-labs/postern" class="card-link" target="_blank" rel="noopener noreferrer" style="display:block;margin-top:0.35rem">
             github.com/skyphusion-labs/postern
           </a>
         </article>
@@ -456,7 +520,7 @@
           </div>
           <h3>The IMAP door</h3>
           <p>
-            Server-side SEARCH pushdown, ENVELOPE fidelity v2, RFC 2177 IDLE, LDAP group-gated auth on 993,
+            Server-side SEARCH pushdown, ENVELOPE fidelity, RFC 2177 IDLE, LDAP group-gated auth on 993,
             trust-gated PROXY protocol behind the load balancer. Built by pointing real clients at it and
             fixing what they choked on.
           </p>
@@ -469,8 +533,8 @@
           </div>
           <h3>Agents welcome</h3>
           <p>
-            Scope-gated MCP send tools, a per-identity send registry, MTA-STS policy route, and a Go relay that
-            bridges SMTP-only callers. The mailbox the whole stack is moving toward.
+            Identity-bound scopes, MCP send/read tools, per-identity send registry, MTA-STS policy route,
+            and a Go relay that bridges SMTP-only callers. Each credential is a person, not a shared bot key.
           </p>
         </article>
       </div>
@@ -478,15 +542,60 @@
       <dl class="member-facts" style="margin-top: 2rem;">
         <div>
           <dt>Recent milestones</dt>
-          <dd><strong>v1.4.1</strong>: identity-bound read and send so each agent or human acts as themselves, projection census for honest IMAP doors, and webmail attachment-send race fixed. Live demo: <a href="https://demo.posternonline.com" target="_blank" rel="noopener noreferrer">demo.posternonline.com</a>. Write-up: <a href="https://skyphusion.net/blog/postern-identity-bound/" target="_blank" rel="noopener noreferrer">Postern v1.4.1</a>.</dd>
+          <dd><strong>v1.4.x</strong>: identity-bound read and send, projection census for honest IMAP doors, public demo landing with sitemap/robots and apex redirect. Write-up: <a href="https://skyphusion.net/blog/postern-identity-bound/" target="_blank" rel="noopener noreferrer">Postern identity-bound</a>.</dd>
         </div>
       </dl>
     </section>
 
+    <section id="prism" class="flagship" aria-labelledby="prism-title">
+      <div class="section-head">
+        <p class="section-eyebrow">Playground</p>
+        <h2 id="prism-title">Prism</h2>
+        <p class="section-intro">
+          Multimodal AI in one Cloudflare Worker. Public signup at
+          <a href="https://play.skyphusion.org" target="_blank" rel="noopener noreferrer">play.skyphusion.org</a>:
+          you bring an AI Gateway (Unified Billing BYOK). Chat, voice, image, video, music, RAG, and web search.
+          No Access wall on play; the keys are yours.
+        </p>
+      </div>
+      <div class="flagship-grid">
+        <article class="flagship-card flagship-card--lead">
+          <div class="card-meta">
+            <span class="pill pill--cyan">AI</span>
+            <span class="pill pill--muted">Public BYOK</span>
+          </div>
+          <h3><a href="https://github.com/skyphusion-labs/prism" target="_blank" rel="noopener noreferrer">Prism</a></h3>
+          <p>
+            Hands-on multimodal playground for the stack we run elsewhere as infrastructure.
+            AGPL source; free to self-host or use the public play host with your own gateway.
+          </p>
+          <a href="https://play.skyphusion.org" class="card-link" target="_blank" rel="noopener noreferrer">Try Prism →</a>
+          <a href="https://github.com/skyphusion-labs/prism" class="card-link" target="_blank" rel="noopener noreferrer" style="display:block;margin-top:0.35rem">github.com/skyphusion-labs/prism</a>
+        </article>
+        <article class="flagship-card">
+          <div class="card-meta">
+            <span class="pill pill--amber">Write-up</span>
+            <span class="pill pill--muted">Blog</span>
+          </div>
+          <h3>Why public BYOK</h3>
+          <p>
+            Access-era private play is retired. First-party signup and per-user keys keep cost and control
+            with the operator. Ship note:
+            <a href="https://skyphusion.net/blog/prism-public/" target="_blank" rel="noopener noreferrer">Prism public BYOK</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <section id="projects" class="projects" aria-labelledby="projects-title">
       <div class="section-head">
-        <p class="section-eyebrow">Worlds &amp; research</p>
-        <h2 id="projects-title">The Hollow Grid &amp; Common Thread</h2>
+        <p class="section-eyebrow">Worlds</p>
+        <h2 id="projects-title">The Hollow Grid</h2>
+        <p class="section-intro">
+          Federated text worlds on Cloudflare Workers and Durable Objects, plus language-port world
+          servers on the same Grid. Product focus remains Vivijure and Postern; the Grid stays a live
+          playground and proof of federation.
+        </p>
       </div>
 
       <div class="project-rails">
@@ -499,17 +608,33 @@
               </div>
               <h4><a href="https://github.com/skyphusion-labs/the-hollow-grid" target="_blank" rel="noopener noreferrer">The Hollow Grid</a></h4>
               <p>
-                A persistent, federated text world on Cloudflare Workers and Durable Objects. One Durable Object holds
-                a whole world; hibernation makes it ~$0 when empty; separate deployments share one Grid so your
-                character travels between worlds. Play now at
-                <a href="https://hollow.skyphusion.org" target="_blank" rel="noopener noreferrer">hollow.skyphusion.org</a>
-                and <a href="https://dustfall.skyphusion.org" target="_blank" rel="noopener noreferrer">dustfall.skyphusion.org</a>.
+                A persistent, federated text world on Workers and Durable Objects. One DO holds a whole
+                world; hibernation is ~$0 when empty; deployments share one Grid so characters travel.
+                Play free at
+                <a href="https://hollow.skyphusion.org" target="_blank" rel="noopener noreferrer">hollow</a>
+                and
+                <a href="https://dustfall.skyphusion.org" target="_blank" rel="noopener noreferrer">dustfall</a>.
+                Language ports live on the same mesh:
+                <a href="https://rustchoir.skyphusion.org" target="_blank" rel="noopener noreferrer">Rust Choir</a>
+                (Go),
+                <a href="https://verdigris.skyphusion.org" target="_blank" rel="noopener noreferrer">Verdigris Spool</a>
+                (Python).
                 <a href="https://github.com/skyphusion-labs/mud-bots" target="_blank" rel="noopener noreferrer">mud-bots</a>
-                sends AI inhabitants driven by open-source Workers AI models to face the game's real moral choices and double as live QA.
+                runs AI inhabitants on Workers AI for play and live QA.
               </p>
               <p style="margin-top: 0.75rem; font-size: 0.85rem;">
-                <strong style="color: var(--fg); font-weight: 600;">Recent milestones:</strong>
-                Relicensed MIT to AGPL-3.0, federation hub extraction hardened, structured event channel drives browser clients, bots, and tests alike. Write-up on <a href="https://skyphusion.net/blog/the-hollow-grid/" target="_blank" rel="noopener noreferrer">skyphusion.net</a>.
+                <strong style="color: var(--fg); font-weight: 600;">Repos:</strong>
+                <a href="https://github.com/skyphusion-labs/the-hollow-grid" target="_blank" rel="noopener noreferrer">the-hollow-grid</a>
+                ·
+                <a href="https://github.com/skyphusion-labs/hollow-grid-go" target="_blank" rel="noopener noreferrer">hollow-grid-go</a>
+                ·
+                <a href="https://github.com/skyphusion-labs/hollow-grid-py" target="_blank" rel="noopener noreferrer">hollow-grid-py</a>
+                ·
+                <a href="https://github.com/skyphusion-labs/hollow-grid-c" target="_blank" rel="noopener noreferrer">hollow-grid-c</a>
+                ·
+                <a href="https://github.com/skyphusion-labs/hollow-grid-asm" target="_blank" rel="noopener noreferrer">hollow-grid-asm</a>
+                (Basalt assembly path). Write-up on
+                <a href="https://skyphusion.net/blog/the-hollow-grid/" target="_blank" rel="noopener noreferrer">skyphusion.net</a>.
               </p>
               <a href="https://github.com/skyphusion-labs/the-hollow-grid" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
             </article>
@@ -517,19 +642,16 @@
           <li>
             <article class="project-card">
               <div class="card-meta">
-                <span class="pill pill--amber">OSINT</span>
-                <span class="pill pill--muted">Methodology</span>
+                <span class="pill pill--amber">Research</span>
+                <span class="pill pill--muted">Maintenance</span>
               </div>
               <h4><a href="https://github.com/skyphusion-labs/common-thread" target="_blank" rel="noopener noreferrer">Common Thread</a></h4>
               <p>
-                Sockpuppet attribution from public behavioral signals, for pro se litigants, journalists, and OSINT
-                practitioners. A methodology paper (CC-BY-4.0) in lockstep with a Cloudflare Workers reference
-                implementation (AGPL-3.0). Public UI at
-                <a href="https://common-thread.skyphusion.org" target="_blank" rel="noopener noreferrer">common-thread.skyphusion.org</a>.
-              </p>
-              <p style="margin-top: 0.75rem; font-size: 0.85rem;">
-                <strong style="color: var(--fg); font-weight: 600;">Recent milestones:</strong>
-                Paper and code reconciled for v1, new extractors, hybrid DB-backed CI suites, API hardening. Write-up on <a href="https://skyphusion.net/blog/common-thread/" target="_blank" rel="noopener noreferrer">skyphusion.net</a>.
+                Sockpuppet attribution from public behavioral signals (pro se, journalists, OSINT).
+                Methodology paper (CC-BY-4.0) plus Cloudflare Workers reference implementation (AGPL).
+                Public UI remains at
+                <a href="https://common-thread.skyphusion.org" target="_blank" rel="noopener noreferrer">common-thread.skyphusion.org</a>;
+                product focus is shelved in favor of Vivijure and Postern.
               </p>
               <a href="https://github.com/skyphusion-labs/common-thread" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
             </article>
@@ -537,26 +659,11 @@
         </ul>
 
         <div class="rail" style="margin-top: 2.5rem;">
-          <h3 class="rail-title">Also</h3>
+          <h3 class="rail-title">Tooling</h3>
           <p class="section-intro" style="margin-bottom: 1.25rem;">
-            Side projects we actively maintain. Not the flagship, but worth knowing about.
+            Supporting tools we maintain in the open. Not the product focus, still useful.
           </p>
           <ul class="project-list">
-            <li>
-              <article class="project-card">
-                <div class="card-meta">
-                  <span class="pill pill--cyan">AI</span>
-                  <span class="pill pill--muted">Multimodal</span>
-                </div>
-                <h4><a href="https://github.com/skyphusion-labs/prism" target="_blank" rel="noopener noreferrer">Prism</a></h4>
-                <p>
-                  Multimodal AI playground in a single Cloudflare Worker. Public signup at
-                  <a href="https://play.skyphusion.org" target="_blank" rel="noopener noreferrer">play.skyphusion.org</a>:
-                  bring your own AI Gateway (Unified Billing). Chat, voice, image, video, music, RAG, and web search.
-                </p>
-                <a href="https://play.skyphusion.org" class="card-link" target="_blank" rel="noopener noreferrer">Try Prism →</a>
-              </article>
-            </li>
             <li>
               <article class="project-card">
                 <div class="card-meta">
@@ -565,8 +672,8 @@
                 </div>
                 <h4><a href="https://github.com/skyphusion-labs/SidVicious_exe" target="_blank" rel="noopener noreferrer">SidVicious_exe</a></h4>
                 <p>
-                  A punk rock Discord collaborator: Claude, web search, a Vectorize knowledge base, and image
-                  generation with zero corporate sycophancy. Slate with the film stack stripped out.
+                  A punk Discord collaborator: Claude, web search, Vectorize knowledge base, and image
+                  generation with zero corporate sycophancy. Slate without the film stack.
                 </p>
                 <a href="https://github.com/skyphusion-labs/SidVicious_exe" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
               </article>
@@ -575,12 +682,12 @@
               <article class="project-card">
                 <div class="card-meta">
                   <span class="pill pill--amber">Security</span>
-                  <span class="pill pill--muted">CI</span>
+                  <span class="pill pill--muted">CI · MIT</span>
                 </div>
                 <h4><a href="https://github.com/skyphusion-labs/security-audit" target="_blank" rel="noopener noreferrer">security-audit</a></h4>
                 <p>
                   Adversarial LLM security audits for GitHub PRs and repos via Workers AI and AI Gateway.
-                  MIT, advisory by default, with a public/private data boundary. Write-up on
+                  Advisory by default, public/private data boundary. Write-up on
                   <a href="https://skyphusion.net/blog/security-audit/" target="_blank" rel="noopener noreferrer">skyphusion.net</a>.
                 </p>
                 <a href="https://github.com/skyphusion-labs/security-audit" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
@@ -595,7 +702,7 @@
                 <h4><a href="https://github.com/skyphusion-labs/search-mcp" target="_blank" rel="noopener noreferrer">search-mcp</a></h4>
                 <p>
                   Cloudflare AI Search toolkit: MCP server, streaming ask Worker, embeddable docs widget, and
-                  git-to-R2 corpus sync. Powers search on vivijure.com and skyphusion.net.
+                  git-to-R2 corpus sync. Powers ask/search on vivijure.com and skyphusion.net.
                 </p>
                 <a href="https://github.com/skyphusion-labs/search-mcp" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
               </article>
@@ -673,11 +780,11 @@
               <dl class="member-facts">
                 <div>
                   <dt>Stack</dt>
-                  <dd>Workers, Durable Objects, D1, R2, Workflows. Five dedicated CPU servers, one dedicated GPU server, cloud VMs, all wired through infrastructure-as-code. Fedora daily driver.</dd>
+                  <dd>Workers, Durable Objects, D1, R2, Workflows. A Hetzner fleet of dedicated hosts (including GPU iron), bastions, and monitors, all wired through infrastructure-as-code. Fedora daily driver.</dd>
                 </div>
                 <div>
                   <dt>Currently building</dt>
-                  <dd>Vivijure 1.0 (self-hosted AI film), Postern 1.4 (agent mailbox), Prism public BYOK, Hollow Grid worlds, and the glue that keeps a one-person fleet honest.</dd>
+                  <dd>Vivijure Studio 1.0 open train (dual-panel, Wan cast train, finish chain), Postern 1.4 (identity-bound agents), Prism public BYOK, Hollow Grid federation, and the glue that keeps a one-person fleet honest.</dd>
                 </div>
               </dl>
               <ul class="member-links">
@@ -937,6 +1044,9 @@
         <a href="https://www.linkedin.com/in/skyphusion/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://vivijure.com" target="_blank" rel="noopener noreferrer">vivijure.com</a>
         <a href="https://demo.vivijure.com" target="_blank" rel="noopener noreferrer">Vivijure demo</a>
+        <a href="https://demo.posternonline.com" target="_blank" rel="noopener noreferrer">Postern demo</a>
+        <a href="https://play.skyphusion.org" target="_blank" rel="noopener noreferrer">Prism play</a>
+        <a href="https://status.skyphusion.org" target="_blank" rel="noopener noreferrer">Status</a>
         <a href="mailto:conrad@skyphusion.org">conrad@skyphusion.org</a>
       </nav>
     </div>

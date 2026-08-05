@@ -8,7 +8,7 @@ Guidance for Claude Code (and the crew) working in this repo.
 make), replacing the AI playground that used to serve the root. A single thin Cloudflare Worker that
 serves a static site from `public/` over Workers Assets; the Worker code only adds a `/health`
 endpoint and a `www` -> apex redirect. **No build step, no framework** -- vanilla HTML/CSS/JS by
-design. Currently **v0.1.0**. Live: skyphusion.org (apex) and www.skyphusion.org. This is the
+design. Currently **v0.3.0**. Live: skyphusion.org (apex) and www.skyphusion.org. This is the
 front door, NOT an app: the studio (Vivijure), the worlds (the-hollow-grid), and the blog
 (skyphusion.net) live in their own repos. Keep this lean.
 
