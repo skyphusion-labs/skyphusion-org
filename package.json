@@ -1,7 +1,7 @@
 {
   "name": "skyphusion-org",
-  "version": "0.3.0",
-  "description": "skyphusion.org intro site: Skyphusion Labs (Vivijure, Postern, Prism, Hollow Grid, tooling).",
+  "version": "0.3.1",
+  "description": "skyphusion.org intro site: Skyphusion Labs (Vivijure, Postern, Prism, Hollow Grid, crew-bus, tooling).",
   "license": "MIT",
   "homepage": "https://skyphusion.org",
   "repository": {

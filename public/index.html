@@ -661,9 +661,27 @@
         <div class="rail" style="margin-top: 2.5rem;">
           <h3 class="rail-title">Tooling</h3>
           <p class="section-intro" style="margin-bottom: 1.25rem;">
-            Supporting tools we maintain in the open. Not the product focus, still useful.
+            Self-hostable tools we maintain in the open: multi-agent coordination, CI security,
+            docs search, and Discord collab. Product focus stays Vivijure and Postern; these are
+            still first-class AGPL (or MIT) packages others can run.
           </p>
           <ul class="project-list">
+            <li>
+              <article class="project-card">
+                <div class="card-meta">
+                  <span class="pill pill--cyan">Agents</span>
+                  <span class="pill pill--muted">MCP bus</span>
+                </div>
+                <h4><a href="https://github.com/skyphusion-labs/crew-bus" target="_blank" rel="noopener noreferrer">crew-bus</a></h4>
+                <p>
+                  Cross-agent, cross-context message bus over MCP. Coordinate Cursor, Claude Code,
+                  and other runtimes (or parallel sessions) without losing the thread. Self-host the
+                  Cloudflare Worker + D1 store; per-consumer tokens; stdio client on npm
+                  (<code>@skyphusion/crew-bus</code>). Git stays the durable contract; the bus is the live layer.
+                </p>
+                <a href="https://github.com/skyphusion-labs/crew-bus" class="card-link" target="_blank" rel="noopener noreferrer">View repo →</a>
+              </article>
+            </li>
             <li>
               <article class="project-card">
                 <div class="card-meta">
@@ -1047,6 +1065,7 @@
         <a href="https://demo.posternonline.com" target="_blank" rel="noopener noreferrer">Postern demo</a>
         <a href="https://play.skyphusion.org" target="_blank" rel="noopener noreferrer">Prism play</a>
         <a href="https://status.skyphusion.org" target="_blank" rel="noopener noreferrer">Status</a>
+        <a href="https://github.com/skyphusion-labs/crew-bus" target="_blank" rel="noopener noreferrer">crew-bus</a>
         <a href="mailto:conrad@skyphusion.org">conrad@skyphusion.org</a>
       </nav>
     </div>
