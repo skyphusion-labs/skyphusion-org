@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.1 -- 2026-08-05
+
+- **feat(site): advertise crew-bus.** Cross-agent / cross-context MCP message bus is a public
+  product others are pointed at for multi-runtime coordination. Tooling rail card + `llms.txt`;
+  not fleet-internal-only.
+
 ## v0.3.0 -- 2026-08-05
 
 - **feat(site): Labs product surface catch-up.** Hero product focus Vivijure + Postern; Prism
