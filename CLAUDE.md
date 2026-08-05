@@ -8,7 +8,7 @@ Guidance for Claude Code (and the crew) working in this repo.
 we make), replacing the AI playground that used to serve the root. A single thin Cloudflare Worker
 that serves a static site from `public/` over Workers Assets; the Worker code only adds a `/health`
 endpoint and a `www` -> apex redirect. **No build step, no framework** -- vanilla HTML/CSS/JS by
-design. Currently **v0.3.0**. Live: skyphusion.org (apex) and www.skyphusion.org.
+design. Currently **v0.3.1**. Live: skyphusion.org (apex) and www.skyphusion.org.
 
 **The playground is NOT on this apex.** Multimodal playground = **`play.skyphusion.org`** (prism /
 `skyphusion-llm` Worker). Do not re-host or redirect the playground at skyphusion.org. This repo is
