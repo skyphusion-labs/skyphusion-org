@@ -4,12 +4,15 @@ Guidance for Claude Code (and the crew) working in this repo.
 
 ## What this is
 
-**skyphusion.org: the intro site.** The front door for Skyphusion Labs (who we are and what we
-make), replacing the AI playground that used to serve the root. A single thin Cloudflare Worker that
-serves a static site from `public/` over Workers Assets; the Worker code only adds a `/health`
+**skyphusion.org: the intro site (apex).** The front door for Skyphusion Labs (who we are and what
+we make), replacing the AI playground that used to serve the root. A single thin Cloudflare Worker
+that serves a static site from `public/` over Workers Assets; the Worker code only adds a `/health`
 endpoint and a `www` -> apex redirect. **No build step, no framework** -- vanilla HTML/CSS/JS by
-design. Currently **v0.3.0**. Live: skyphusion.org (apex) and www.skyphusion.org. This is the
-front door, NOT an app: the studio (Vivijure), the worlds (the-hollow-grid), and the blog
+design. Currently **v0.3.0**. Live: skyphusion.org (apex) and www.skyphusion.org.
+
+**The playground is NOT on this apex.** Multimodal playground = **`play.skyphusion.org`** (prism /
+`skyphusion-llm` Worker). Do not re-host or redirect the playground at skyphusion.org. This repo is
+the front door only; the studio (Vivijure), the worlds (the-hollow-grid), and the blog
 (skyphusion.net) live in their own repos. Keep this lean.
 
 ## Commands
@@ -76,10 +79,8 @@ the self-hosted org fleet.
 - Crew commits land under the member's own `skyphusion-<member>` identity, never Conrad's. (Conrad
   devs ONLY on his laptop, where his commits author as `Conrad Rockenhaus <conrad@skyphusion.org>`
   -- his real name kept, the in-house `@skyphusion.org` email; his name is never scrubbed and his
-  history never rewritten. On the crew host the `conrad` user is the god process and commits as
-  `Mackaye <mackaye@skyphusion.org>`.)
-- Cross-project operating context lives in the main auto-memory
-  (`~/.claude/projects/-home-conrad/memory/`); load it before acting.
+  history never rewritten. On the crew host the **`mackaye`** user is the god process and commits as
+  `Mackaye <mackaye@skyphusion.org>`; `conrad` is break-glass only.)
 
 ## Commits & versioning
 
