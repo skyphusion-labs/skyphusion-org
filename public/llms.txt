@@ -22,6 +22,7 @@
 - mud-bots: https://github.com/skyphusion-labs/mud-bots
 
 ## Tooling
+- crew-bus (cross-agent / cross-context MCP message bus, self-host): https://github.com/skyphusion-labs/crew-bus
 - security-audit (MIT): https://github.com/skyphusion-labs/security-audit
 - search-mcp: https://github.com/skyphusion-labs/search-mcp
 - SidVicious_exe: https://github.com/skyphusion-labs/SidVicious_exe
