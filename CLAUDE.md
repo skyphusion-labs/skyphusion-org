@@ -35,8 +35,9 @@ here or in a real app.
 Behavior is covered by `index.test.ts` (Vitest), run with `npx vitest run`: it asserts the root
 serves 200, `www` 301-redirects to the apex preserving the path, and `/health` returns
 `{ok: true, service: "skyphusion-org"}` as JSON without touching the `ASSETS` binding. CI runs
-typecheck + deploy on `main` (`.github/workflows/ci.yml`), a standalone typecheck on push/PR
-(`typecheck.yml`), and the Vitest coverage run (`code-coverage.yml`). All on GitHub-hosted
+typecheck on push/PR and deploys on `main` (`.github/workflows/ci.yml`); `coverage.yml` is the
+required `coverage` status check and `corpus-notify.yml` fires the search corpus refresh. None of
+them runs `index.test.ts`. All on GitHub-hosted
 `ubuntu-latest`: this is a PUBLIC repo, so per house CI policy it runs the fork-safe hosted path, NOT
 the self-hosted org fleet.
 
@@ -47,7 +48,8 @@ the self-hosted org fleet.
   JSON liveness object, and otherwise hands the request to `env.ASSETS.fetch(request)`. The static
   site in `public/` is the product; the Worker is just the shell.
 - **Static assets, served by Workers Assets.** `wrangler.toml` binds `public/` as `ASSETS`
-  (`assets = { directory = "./public", binding = "ASSETS" }`). Content lives in `public/`:
+  (`assets = { directory = "./public", binding = "ASSETS", run_worker_first = true }`; the flag makes the
+  `www` redirect and `/health` hit the Worker before `ASSETS` answers). Content lives in `public/`:
   `index.html`, `styles.css`, `main.js` (a dependency-free IntersectionObserver reveal-on-scroll,
   skipped under `prefers-reduced-motion`), self-hosted `fonts/`, `og-image.png`, `robots.txt`,
   `sitemap.xml`, `logo-icon.svg`.

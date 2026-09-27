@@ -3,7 +3,8 @@ name: CI
 # Typecheck on every push/PR; deploy to Cloudflare on main. skyphusion-org is a
 # PUBLIC repo, so per CI policy it runs on GitHub-hosted ubuntu-latest (fork-safe),
 # NOT the self-hosted org fleet pool. wrangler deploy on main.
-# skyphusion-org is a thin static-asset worker -- no tests, no container builds.
+# skyphusion-org is a thin static-asset worker -- no container builds. The router
+# tests (index.test.ts) are not run here; run them with npx vitest run.
 on:
   push:
     branches: [main]
