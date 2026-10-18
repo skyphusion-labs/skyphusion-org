@@ -5,7 +5,6 @@
 
 ## Flagship
 - Vivijure (self-hosted AI film studio, Studio 1.0 open train): https://vivijure.com
-- Vivijure demo: https://demo.vivijure.com
 - Vivijure constellation: https://github.com/skyphusion-labs/vivijure
 - Postern (mailbox for humans and agents, v1.4 identity-bound): https://github.com/skyphusion-labs/postern
 - Postern demo: https://demo.posternonline.com
