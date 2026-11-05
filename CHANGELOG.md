@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.2 -- 2026-11-05
+
+- **docs(site):** X handle moved from `@skyphusion` to `@rockrockenhaus` (2026-11-05); `x.com/skyphusion` no longer resolves. Every X link and `twitter:` meta tag now points at `x.com/rockrockenhaus`.
+
 ## v0.3.1 -- 2026-08-05
 
 - **feat(site): advertise crew-bus.** Cross-agent / cross-context MCP message bus is a public
