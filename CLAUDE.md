@@ -8,7 +8,7 @@ Guidance for Claude Code (and the crew) working in this repo.
 we make), replacing the AI playground that used to serve the root. A single thin Cloudflare Worker
 that serves a static site from `public/` over Workers Assets; the Worker code only adds a `/health`
 endpoint and a `www` -> apex redirect. **No build step, no framework** -- vanilla HTML/CSS/JS by
-design. Currently **v0.3.1**. Live: skyphusion.org (apex) and www.skyphusion.org.
+design. Currently **v0.3.2**. Live: skyphusion.org (apex) and www.skyphusion.org.
 
 **The playground is NOT on this apex.** Multimodal playground = **`play.skyphusion.org`** (prism /
 `skyphusion-llm` Worker). Do not re-host or redirect the playground at skyphusion.org. This repo is
@@ -64,7 +64,7 @@ the self-hosted org fleet.
   Use commas, semicolons, parentheses, or `--`. (SEO meta once tripped this; keep it clean.)
 - **No framework, no build step, no CSS preprocessor.** Vanilla HTML/CSS/JS is deliberate. Minimal
   runtime deps; justify any new one.
-- **Handle / username is `skyphusion`** across all services.
+- **Handle / username is `skyphusion`** on GitHub and the other services. X links on this site are `https://x.com/rockrockenhaus` (`public/index.html`, `twitter:site` in `public/privacy.html`). `x.com/skyphusion` does not resolve.
 - **Mirror every `wrangler.toml` binding in the hand-authored `Env`** in `src/index.ts` (currently
   just `ASSETS: Fetcher`). Runtime types come from the pinned `@cloudflare/workers-types` devDep; do
   not generate `worker-configuration.d.ts`.
