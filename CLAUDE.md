@@ -39,7 +39,7 @@ typecheck on push/PR and deploys on `main` (`.github/workflows/ci.yml`); `covera
 required `coverage` status check and `corpus-notify.yml` fires the search corpus refresh. None of
 them runs `index.test.ts`. All on GitHub-hosted
 `ubuntu-latest`: this is a PUBLIC repo, so per house CI policy it runs the fork-safe hosted path, NOT
-the self-hosted org fleet.
+a self-hosted runner (there is no org fleet).
 
 ## Architecture
 
