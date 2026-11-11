@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy notice | Skyphusion Labs</title>
-  <meta name="description" content="Privacy notice for skyphusion.org: a static intro site. No accounts, no cookies, no ad-tech. Self-hosted cookieless Umami for aggregate traffic only." />
+  <meta name="description" content="Privacy notice for skyphusion.org: a static intro site. No accounts, no cookies, no analytics, no ad-tech. We do not want your data." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Conrad Rockenhaus" />
   <meta name="theme-color" content="#0a0f1e" />
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Skyphusion Labs" />
   <meta property="og:title" content="Privacy notice | Skyphusion Labs" />
-  <meta property="og:description" content="We do not want your data. skyphusion.org is static: no accounts, no cookies, no ad-tech. Cookieless self-hosted analytics for aggregate traffic only." />
+  <meta property="og:description" content="We do not want your data. skyphusion.org is static: no accounts, no cookies, no analytics, no ad-tech." />
   <meta property="og:url" content="https://skyphusion.org/privacy" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://skyphusion.org/og-image.png" />
@@ -66,31 +66,11 @@
       vendor. The only outbound requests a page makes are the ones you click.
     </p>
 
-    <h2>The one thing we measure, and how</h2>
+    <h2>Analytics: none</h2>
     <p>
-      The site loads a script from <strong>analytics.skyphusion.org</strong>. That is <strong>Umami</strong>,
-      an open-source analytics tool that we run ourselves, on our own infrastructure. We use it for aggregate
-      traffic counts (which pages get read), and for nothing else.
-    </p>
-    <ul>
-      <li>
-        It is <strong>cookieless</strong>: it sets no cookie and no persistent identifier to follow you
-        between visits.
-      </li>
-      <li>
-        It records the page you viewed, the page that referred you, and the coarse technical details your
-        browser volunteers (browser, operating system, device type, and a country derived from your IP
-        address at request time).
-      </li>
-      <li>
-        It is <strong>self-hosted</strong>, so no analytics vendor receives any of it. There is no third
-        party in this path to sell it to, and we do not sell or share it.
-      </li>
-      <li>It is not used to profile or identify individual visitors.</li>
-    </ul>
-    <p>
-      If you would rather not be counted, any content blocker will stop the script from loading; the site
-      works fine without it.
+      This site loads no analytics script and sets no analytics cookie. Nothing counts who reads what.
+      (It used to load a self-hosted, cookieless Umami script; that service is retired and the script tag
+      is gone.)
     </p>
 
     <h2>Cloudflare serves this site</h2>
@@ -143,13 +123,11 @@
       Built and served from a Cloudflare Worker. No framework. No build step. Just HTML, CSS, and conviction.
     </p>
     <p class="footer-analytics">
-      Cookieless analytics (self-hosted) for aggregate traffic only; no individual tracking or ad-tech.
+      No analytics, no tracking, no ad-tech.
       <a href="/privacy">Privacy notice</a>.
     </p>
   </footer>
 
   <script src="/main.js" defer></script>
-  <!-- Umami OSS marketing analytics (self-hosted). website-id: fleet-chezmoi/system/umami/websites.json -->
-  <script defer src="https://analytics.skyphusion.org/script.js" data-website-id="a84616c8-21fd-408c-8814-d2a3bea02bda"></script>
 </body>
 </html>

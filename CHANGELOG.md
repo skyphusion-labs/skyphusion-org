@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased
+
+- **fix(site): the current lineup, no analytics, and offline hosts named as offline.**
+  - Adds a WordPress on Cloudflare section (Skyphusion AI on WordPress.org, the WordPress on Cloudflare framework, Zaraz Consent, and the GGC store at ggc.sh), prism-mcp in Tooling, and an "In development" teaser for a forex trading bot (no link).
+  - Drops the archived vivijure-musetalk and vivijure-audio-upscale cards.
+  - Postern points at https://posternonline.com in the JSON-LD and the footer.
+  - The Umami tag is removed from both pages, because its host no longer resolves. The privacy notice says "Analytics: none" and the footer note matches.
+  - Hosts that do not resolve are deleted: the Rust Choir and Verdigris Spool worlds are "offline, moving to containers"; Common Thread's hosted service is "offline, moving to a container with Hyperdrive"; the dead status-page link is removed.
+  - Home title (69 to 59 characters) and description (277 to 153) fit search snippets.
+  - `llms.txt` and the sitemap `lastmod` are updated to match.
+
 ## v0.3.2 -- 2026-11-05
 
 - **docs(site):** X handle moved from `@skyphusion` to `@rockrockenhaus` (2026-11-05); `x.com/skyphusion` no longer resolves. Every X link and `twitter:` meta tag now points at `x.com/rockrockenhaus`.

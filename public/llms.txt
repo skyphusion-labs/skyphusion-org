@@ -6,7 +6,8 @@
 ## Flagship
 - Vivijure (self-hosted AI film studio, Studio 1.0 open train): https://vivijure.dev
 - Vivijure constellation: https://github.com/skyphusion-labs/vivijure
-- Postern (mailbox for humans and agents, v1.4 identity-bound): https://github.com/skyphusion-labs/postern
+- Postern (email for humans and agents): https://posternonline.com
+- Postern source: https://github.com/skyphusion-labs/postern
 - Postern demo: https://demo.posternonline.com
 
 ## Play
@@ -16,8 +17,7 @@
 ## Worlds
 - The Hollow Grid: https://hollow.skyphusion.org
 - Dustfall: https://dustfall.skyphusion.org
-- Rust Choir (Go port): https://rustchoir.skyphusion.org
-- Verdigris Spool (Python port): https://verdigris.skyphusion.org
+- Rust Choir (Go) and Verdigris Spool (Python) world ports: offline, moving to containers
 - mud-bots: https://github.com/skyphusion-labs/mud-bots
 
 ## Tooling
@@ -27,12 +27,20 @@
 - SidVicious_exe: https://github.com/skyphusion-labs/SidVicious_exe
 - Slate (Discord screenwriter for Vivijure): https://github.com/skyphusion-labs/slate
 
+## WordPress
+- Skyphusion AI (WordPress plugin, live on WordPress.org): https://wordpress.org/plugins/skyphusion-ai/
+- WordPress on Cloudflare: https://github.com/skyphusion-labs/wordpress-on-cloudflare
+- Zaraz Consent: https://github.com/skyphusion-labs/zaraz-consent
+- GGC store: https://ggc.sh
+
+## In development
+- A forex trading bot on MetaTrader 4 (no public link yet)
+
 ## Research (maintenance)
-- Common Thread: https://common-thread.skyphusion.org
+- Common Thread: https://github.com/skyphusion-labs/common-thread (hosted service offline, moving to a container with Hyperdrive)
 
 ## More
 - Engineering blog: https://skyphusion.net
 - GitHub org: https://github.com/skyphusion-labs
-- Status: https://status.skyphusion.org
 - Org profile page: https://github.skyphusion.org
 - Conrad: https://github.com/skyphusion
