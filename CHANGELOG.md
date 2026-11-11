@@ -4,7 +4,7 @@
 
 - **fix(site): the current lineup, no analytics, and offline hosts named as offline.**
   - Adds a WordPress on Cloudflare section (Skyphusion AI on WordPress.org, the WordPress on Cloudflare framework, Zaraz Consent, and the GGC store at ggc.sh), prism-mcp in Tooling, and an "In development" teaser for a forex trading bot (no link).
-  - Drops the archived vivijure-musetalk and vivijure-audio-upscale cards.
+  - Drops the archived vivijure-musetalk and vivijure-audio-upscale cards, and the crew-bus card and footer link (the bus is retired).
   - Postern points at https://posternonline.com in the JSON-LD and the footer.
   - The Umami tag is removed from both pages, because its host no longer resolves. The privacy notice says "Analytics: none" and the footer note matches.
   - Hosts that do not resolve are deleted: the Rust Choir and Verdigris Spool worlds are "offline, moving to containers"; Common Thread's hosted service is "offline, moving to a container with Hyperdrive"; the dead status-page link is removed.
