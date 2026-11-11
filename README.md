@@ -36,7 +36,7 @@ Visitors evaluating Skyphusion Labs and anyone looking for the front door to our
 - **Live site:** https://skyphusion.org
 - **Blog:** https://skyphusion.net
 - **Open source:** https://github.com/skyphusion-labs
-- **Vivijure:** https://vivijure.com
+- **Vivijure:** https://vivijure.dev
 
 ## License
 
