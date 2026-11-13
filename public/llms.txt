@@ -28,7 +28,7 @@
 
 ## WordPress
 - Skyphusion AI (WordPress plugin, live on WordPress.org): https://wordpress.org/plugins/skyphusion-ai/
-- WordPress on Cloudflare: https://github.com/skyphusion-labs/wordpress-on-cloudflare
+- Pagefeather: https://github.com/skyphusion-labs/pagefeather
 - Zaraz Consent: https://github.com/skyphusion-labs/zaraz-consent
 - GGC store: https://ggc.sh
 
