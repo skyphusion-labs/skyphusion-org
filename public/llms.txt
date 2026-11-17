@@ -28,9 +28,9 @@
 
 ## WordPress
 - Skyphusion AI (WordPress plugin, live on WordPress.org): https://wordpress.org/plugins/skyphusion-ai/
-- Pagefeather: https://github.com/skyphusion-labs/pagefeather
+- Pagefeather (b-dosql default; container store path retired): https://github.com/skyphusion-labs/pagefeather
 - Zaraz Consent: https://github.com/skyphusion-labs/zaraz-consent
-- GGC store: https://ggc.sh
+- GGC store (Pagefeather example, no store Container): https://ggc.sh
 
 ## In development
 - A forex trading bot on MetaTrader 4 (no public link yet)
