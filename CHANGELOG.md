@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- **docs(site): GGC is Pagefeather b-dosql, not a Container (#103).**
+  - The GGC card no longer says Cloudflare Container. ggc.sh is the live WooCommerce example on Pagefeather.
+  - The Pagefeather card says checkout runs in the Durable Object. The container store path is retired.
+
 - **fix(site): the current lineup, no analytics, and offline hosts named as offline.**
   - Adds a WordPress on Cloudflare section (Skyphusion AI on WordPress.org, the WordPress on Cloudflare framework, Zaraz Consent, and the GGC store at ggc.sh), prism-mcp in Tooling, and an "In development" teaser for a forex trading bot (no link).
   - Drops the archived vivijure-musetalk and vivijure-audio-upscale cards, and the crew-bus card and footer link (the bus is retired).
